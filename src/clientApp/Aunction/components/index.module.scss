@@ -173,6 +173,7 @@
 
 // RelatedProductsComponent
 .RelatedProductsComponent {
+  z-index: 2;
   display: flex;
   flex-direction: column;
   gap: #{scaleXL(60)};
