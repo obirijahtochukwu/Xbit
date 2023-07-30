@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 // import "./index.scss";
 import reportWebVitals from "./reportWebVitals";
-import App from "./App";
+import App from "./NFT_GAME/App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

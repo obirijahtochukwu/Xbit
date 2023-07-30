@@ -1,0 +1,348 @@
+@import "../../../styles/theme.scss";
+
+.HeaderComponent {
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: #{clamps(1024)};
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: #{clamps(50)};
+  padding: #{clamps(58)} 0 0 #{clamps(50)};
+}
+
+.imgTitle {
+  @include BgImgContain();
+  width: #{clamps(762)};
+  height: #{clamps(156)};
+  margin: 0 auto;
+}
+
+.btns_Header {
+  display: flex;
+  width: fit-content;
+  justify-content: center;
+  gap: #{clamps(10)};
+  margin: 0 auto;
+}
+
+.btn_Header {
+  cursor: pointer;
+  @include flexCenter();
+  justify-content: center;
+  gap: #{clamps(8)};
+  padding: #{clamps(16)} #{clamps(30)};
+  border: #{clamps(1)} solid $yellow;
+  border-radius: #{clamps(32)};
+  background: $black;
+  text-transform: uppercase;
+
+  font-size: #{clamps(16)};
+  @include text500();
+  color: $white;
+}
+
+// WhatIsKatanaComponent
+.WhatIsKatanaComponent {
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: #{clamps(80)};
+  padding-top: #{clamps(100)};
+}
+
+.logos {
+  @include flexCenter();
+  justify-content: center;
+  gap: #{clamps(50)};
+  margin: 0 auto;
+
+  img {
+    width: #{clamps(234)};
+    height: #{clamps(92)};
+    object-fit: contain;
+  }
+}
+
+.title_WhatIsKatanaComponent {
+  font-size: #{clamps(24)};
+  @include text500();
+  color: $yellow;
+}
+
+.box_WhatIsKatanaComponent {
+  @include flexCenter();
+  gap: #{clamps(140)};
+  margin: 0 auto;
+}
+
+.img_WhatIsKatanaComponent {
+  width: #{clamps(500)};
+  width: #{clamps(713)};
+}
+
+.answers_WhatIsKatanaComponent {
+  display: flex;
+  flex-direction: column;
+  gap: #{clamps(15)};
+  margin: #{clamps(40)} auto #{clamps(50)} auto;
+}
+
+.answer_WhatIsKatanaComponent {
+  display: flex;
+  gap: #{clamps(16)};
+  align-items: start;
+  max-width: #{clamps(602.2)};
+
+  img {
+    width: #{clamps(15)};
+    height: #{clamps(15)};
+    object-fit: contain;
+  }
+
+  font-size: #{clamps(16)};
+  @include text400();
+  color: $white;
+  line-height: #{clamps(24)};
+}
+
+// AboutTheGameComponent
+.AboutTheGameComponent {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-top: #{clamps(130)};
+  padding-bottom: #{clamps(663)};
+}
+
+.title_AboutTheGameComponent {
+  font-size: #{clamps(64)};
+  @include text700();
+  font-family: $Jost !important;
+  color: $white;
+  text-align: center;
+}
+
+.text_AboutTheGameComponent {
+  font-size: #{clamps(18)};
+  @include text400();
+  font-family: $Jost !important;
+  color: $white;
+  opacity: 0.7;
+  text-align: center;
+  width: #{clamps(783)};
+  margin: 0 auto;
+}
+
+.cards_AboutTheGameComponent {
+  display: flex;
+  margin: #{clamps(61)} auto #{clamps(75)} auto;
+  width: fit-content;
+  gap: #{clamps(32)};
+}
+
+.card_AboutTheGameComponent {
+  height: #{clamps(505)};
+  width: #{clamps(413)};
+  background: #111115;
+  border: #{clamps(1)} solid rgba(255, 255, 255, 0.2);
+  border-radius: #{clamps(15)};
+  backdrop-filter: blur(#{clamps(30)});
+  overflow: hidden;
+}
+
+.cardImg_AboutTheGameComponent {
+  height: #{clamps(259)};
+  width: #{clamps(435)};
+  position: relative;
+  top: #{clamps(-10)};
+  left: #{clamps(-5)};
+  object-fit: cover;
+}
+
+.top {
+  top: #{clamps(-20)} !important;
+}
+
+.cardSubtitle_AboutTheGameComponent {
+  font-size: #{clamps(14)};
+  font-family: $Jost;
+  font-weight: 500;
+  color: $yellow;
+  line-height: #{clamps(19.2)};
+  letter-spacing: #{clamps(7)};
+  text-transform: uppercase;
+  text-align: center;
+  // margin-top: #{clamps(30)};
+}
+
+.cardTitle_AboutTheGameComponent {
+  font-size: #{clamps(24)};
+  font-family: $Jost;
+  font-weight: 700;
+  color: $white;
+  line-height: #{clamps(28.2)};
+  text-transform: uppercase;
+  text-align: center;
+  margin: #{clamps(12)} 0 #{clamps(30)} 0;
+}
+
+.cardDesc_AboutTheGameComponent {
+  font-size: #{clamps(16)};
+  font-family: $Jost;
+  font-weight: 400;
+  color: $white;
+  line-height: #{clamps(25.6)};
+  text-align: center;
+  margin: 0 auto #{clamps(20)} auto;
+  width: #{clamps(332)};
+}
+
+.mints_AboutTheGameComponent {
+  display: flex;
+  gap: #{clamps(30.87)};
+  justify-content: center;
+  margin: #{clamps(193)} auto #{clamps(125)} auto;
+}
+
+.mint_AboutTheGameComponent {
+  position: relative;
+  width: #{clamps(695)};
+  height: #{clamps(302)};
+  padding: 0 0 #{clamps(46)} #{clamps(30)};
+  background: #111115;
+  border-radius: #{clamps(15)};
+}
+
+.mintLogo_AboutTheGameComponent {
+  width: #{clamps(50)};
+  height: #{clamps(47)};
+  margin-right: #{clamps(10)};
+}
+
+.mintText_AboutTheGameComponent {
+  font-size: #{clamps(15)};
+  font-family: $Jost;
+  font-weight: 500;
+  color: $yellow;
+  text-transform: uppercase;
+}
+
+.mintTitle__AboutTheGameComponent {
+  font-size: #{clamps(24)};
+  font-family: $inter;
+  font-weight: 500;
+  color: $yellow;
+  text-transform: uppercase;
+  margin-top: #{clamps(32)};
+}
+
+.mintDesc__AboutTheGameComponent {
+  font-size: #{clamps(16)};
+  font-family: $poppins;
+  font-weight: 400;
+  color: #787878;
+  line-height: #{clamps(24)};
+  width: #{clamps(288.39)};
+  margin-bottom: #{clamps(5)};
+}
+
+.mintsmall_AboutTheGameComponent {
+  font-size: #{clamps(8)};
+  font-family: $poppins;
+  font-weight: 600;
+  color: $yellow;
+}
+
+.mintImg__AboutTheGameComponent {
+  position: absolute;
+  top: #{clamps(-63)};
+  left: #{clamps(297)};
+  width: #{clamps(476)};
+  height: #{clamps(391)};
+}
+
+// TrailerGalleryComponent
+.TrailerGalleryComponent {
+  position: relative;
+
+  background: $black;
+  z-index: 1;
+}
+
+.control_TrailerGalleryComponent {
+  @include flexCenterBetween();
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  z-index: 18;
+  padding: 0 #{clamps(80)};
+
+  img {
+    cursor: pointer;
+    height: #{clamps(57)};
+    width: #{clamps(30)};
+  }
+}
+
+.carousels_TrailerGalleryComponent {
+  width: fit-content;
+  overflow: scroll;
+  @include flexCenter();
+  gap: 6.771vw;
+  padding: 5.208vw 15%;
+  z-index: 5;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.carousel_TrailerGalleryComponent {
+  position: relative;
+}
+.carouselImg_TrailerGalleryComponent {
+  width: 43.333vw;
+  height: 23.893vw;
+  object-fit: cover;
+  border: 0.051vw solid $yellow;
+  transition: all 0.3s ease-in-out;
+}
+
+.play_TrailerGalleryComponent {
+  position: absolute;
+  top: 13vw;
+  left: 23.906vw;
+  z-index: 1;
+  cursor: pointer;
+  height: 5.313vw;
+  width: 5.313vw;
+}
+
+.title_TrailerGalleryComponent {
+  font-size: #{clamps(30)};
+  @include text600();
+  font-family: $Jost !important;
+  color: $white;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: #{clamps(20)};
+}
+
+.bg_TrailerGalleryComponent {
+  position: absolute;
+  bottom: 17.708vw;
+  z-index: -1;
+  left: 23.906vw;
+  height: 55.938vw;
+  width: 61.2vw;
+}
