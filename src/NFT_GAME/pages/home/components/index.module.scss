@@ -689,6 +689,17 @@
   @include BgImgContain();
   object-fit: cover;
   transition: all 0.3s ease-in-out;
+  padding: 1.625vw;
+}
+
+.carouselHeader_OurActivityComponent {
+  @include flexCenter();
+  font-size: #{clamps(18)};
+  text-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.5);
+  @include text400();
+  font-family: $roboto !important;
+  color: #eee;
+  font-style: normal;
 }
 
 .play_OurActivityComponent {
@@ -699,6 +710,28 @@
   cursor: pointer;
   height: 5.313vw;
   width: 5.313vw;
+}
+
+.carouselHeaderImg_OurActivityComponent {
+  width: 2.083vw;
+  height: 2.083vw;
+  border-radius: 100%;
+  margin-right: #{clamps(10)};
+}
+
+// .carouselHeaderTitle_OurActivityComponent {
+// }
+
+.share_OurActivityComponent {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+
+  img {
+    margin: 0 auto;
+    width: #{clamps(20)};
+    height: #{clamps(16)};
+  }
 }
 
 .carouselTitle_OurActivityComponent {

@@ -650,25 +650,27 @@ export const OurActivityComponent = () => {
                     }}
                     className={styles.carouselImg_OurActivityComponent}
                   >
-                    {/* <div className="">
+                    <div className={styles.carouselHeader_OurActivityComponent}>
                       <img
                         src="/NFT_GAME/media/Link - Photo image of Katana Inu.svg"
                         alt=""
-                        className={styles.play_OurActivityComponent}
+                        className={
+                          styles.carouselHeaderImg_OurActivityComponent
+                        }
                       />
-                      <div className="">
+                      <div
+                        className={
+                          styles.carouselHeaderTitle_OurActivityComponent
+                        }
+                      >
                         Katana Inu at Blockchain Economy in Istanbul 2022 | +
                         Speech from Founder
                       </div>
-                      <div className="">
-                        <img
-                          src="/NFT_GAME/media/ytp-id-8.svg"
-                          alt=""
-                          className={styles.play_OurActivityComponent}
-                        />
+                      <div className={styles.share_OurActivityComponent}>
+                        <img src="/NFT_GAME/media/ytp-id-8.svg" alt="" />
                         <div className="">Share</div>
                       </div>
-                    </div> */}
+                    </div>
                   </div>
                   {active === Number(id) ? (
                     <img
