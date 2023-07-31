@@ -346,3 +346,387 @@
   height: 55.938vw;
   width: 61.2vw;
 }
+
+// ClosedBetaComponent
+.ClosedBetaComponent {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-top: #{clamps(154)};
+  padding-bottom: #{clamps(175.8)};
+}
+
+.subtitle_ClosedBetaComponent {
+  font-size: #{clamps(64)};
+  @include text500();
+  font-family: $Jost !important;
+  color: $yellow;
+  text-transform: uppercase;
+  text-align: center;
+  font-style: italic;
+  line-height: #{clamps(40)};
+}
+
+.title_ClosedBetaComponent {
+  font-size: #{clamps(64)};
+  @include text700();
+  font-family: $Jost !important;
+  color: $white;
+  text-transform: uppercase;
+  margin-bottom: #{clamps(30)};
+  text-align: center;
+}
+
+.text_ClosedBetaComponent {
+  font-size: #{clamps(35)};
+  @include text500();
+  font-family: $Jost !important;
+  color: $white;
+  text-align: center;
+}
+
+.downloads_ClosedBetaComponent {
+  @include flexCenter();
+  gap: #{clamps(16)};
+  width: fit-content;
+  margin: #{clamps(20)} auto;
+  img {
+    cursor: pointer;
+    width: #{clamps(246)};
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+.durationBox_ClosedBetaComponent {
+  width: #{clamps(620)};
+  margin: 0 auto;
+}
+
+.duration_ClosedBetaComponent {
+  @include flexCenter();
+  justify-content: center;
+  gap: #{clamps(30)};
+  padding: #{clamps(16)} auto;
+}
+
+.durationTitle_ClosedBetaComponent {
+  font-size: #{clamps(16)};
+  @include text500();
+  font-family: $Jost !important;
+  color: $white;
+  line-height: #{clamps(19.2)};
+}
+
+.durationText_ClosedBetaComponent {
+  font-size: #{clamps(20)};
+  @include text400();
+  font-family: $Jost !important;
+  color: $white;
+  line-height: #{clamps(35)};
+  opacity: 0.83;
+}
+
+.durationBtns__ClosedBetaComponent {
+  @include flexCenter();
+  gap: #{clamps(5)};
+}
+.durationBtn__ClosedBetaComponent {
+  cursor: pointer;
+  padding: #{clamps(8)} #{clamps(15.75)};
+  border: #{clamps(1)} solid $yellow;
+  border-radius: #{clamps(18)};
+  text-transform: uppercase;
+
+  font-size: #{clamps(24)};
+  @include text600();
+  color: $yellow;
+  font-style: italic;
+}
+
+.key_ClosedBetaComponent {
+  @include flexCenter();
+  gap: #{clamps(100)};
+  width: fit-content;
+  margin: #{clamps(130)} #{clamps(103)} 0 auto;
+}
+
+.keyImg_ClosedBetaComponent {
+  height: #{clamps(815.01)};
+  width: #{clamps(984)};
+}
+
+.aside_ClosedBetaComponent {
+  width: #{clamps(482.45)};
+}
+
+.asideKey_ClosedBetaComponent {
+  @include flexCenterBetween();
+  gap: #{clamps(30)};
+  margin-bottom: #{clamps(32)};
+  // width: 100%;
+  img {
+    cursor: pointer;
+    width: #{clamps(64.5)};
+    height: #{clamps(67.7)};
+    object-fit: contain;
+  }
+
+  font-size: #{clamps(24)};
+  @include text600();
+  color: $white;
+  font-style: italic;
+}
+
+.asideTwitch_ClosedBetaComponent {
+  @include flexCenterBetween();
+  gap: #{clamps(10)};
+  background-color: #808aff;
+  border-radius: #{clamps(7)};
+  padding: #{clamps(10)} #{clamps(20)};
+  img {
+    cursor: pointer;
+    width: #{clamps(42.7)};
+    height: #{clamps(34)};
+  }
+
+  font-size: #{clamps(19)};
+  @include text600();
+  font-family: $Jost !important;
+  color: $white;
+  font-style: italic;
+}
+
+.noKey_ClosedBetaComponent {
+  @include flexCenter();
+  justify-content: center;
+  background-color: #191d23;
+  border-radius: #{clamps(7)};
+  padding: #{clamps(10)} 0;
+  margin: #{clamps(15)} 0;
+
+  font-size: #{clamps(19)};
+  @include text600();
+  color: $white;
+  font-family: $Jost !important;
+  font-style: italic;
+}
+
+.info_ClosedBetaComponent {
+  font-size: #{clamps(18)};
+  @include text400();
+  font-family: $Jost !important;
+  color: $white;
+  opacity: 0.75;
+  text-transform: capitalize;
+  line-height: #{clamps(24.84)};
+}
+
+.infoSmall_ClosedBetaComponent {
+  font-size: #{clamps(16)};
+  @include text400();
+  color: $yellow;
+  line-height: #{clamps(24)};
+}
+
+.or1_ClosedBetaComponent {
+  @include flexCenterBetween();
+  gap: #{clamps(10)};
+  background-color: #191d23;
+  border-radius: #{clamps(7)};
+  padding: #{clamps(20)};
+  margin-top: #{clamps(10)};
+  img {
+    cursor: pointer;
+    width: #{clamps(40)};
+    height: #{clamps(35)};
+  }
+
+  font-size: #{clamps(19)};
+  @include text600();
+  font-family: $Jost !important;
+  color: $white;
+  font-style: italic;
+}
+
+.or2_ClosedBetaComponent {
+  @include flexCenterBetween();
+  gap: #{clamps(70)};
+  background-color: #191d23;
+  border-radius: #{clamps(7)};
+  padding: #{clamps(10)} #{clamps(20)};
+  margin-top: #{clamps(10)};
+  img {
+    cursor: pointer;
+    object-fit: contain;
+    width: #{clamps(131)};
+    height: #{clamps(60)};
+  }
+
+  font-size: #{clamps(19)};
+  @include text600();
+  font-family: $Jost !important;
+  color: $white;
+  font-style: italic;
+  line-height: #{clamps(36)};
+}
+
+.or3_ClosedBetaComponent {
+  @include flexCenterBetween();
+  gap: #{clamps(1)};
+  background-color: #191d23;
+  border-radius: #{clamps(7)};
+  padding: #{clamps(10)} #{clamps(20)};
+  margin-top: #{clamps(10)};
+  img {
+    cursor: pointer;
+    object-fit: contain;
+    width: #{clamps(49)};
+    height: #{clamps(59)};
+  }
+
+  font-size: #{clamps(19)};
+  @include text600();
+  font-family: $Jost !important;
+  color: $white;
+  font-style: italic;
+  line-height: #{clamps(36)};
+}
+
+.or_ClosedBetaComponent {
+  @include flexCenterBetween();
+  margin: #{clamps(10)} 0;
+
+  img {
+    cursor: pointer;
+    width: #{clamps(270)};
+    height: #{clamps(18)};
+  }
+
+  button {
+    cursor: pointer;
+    padding: #{clamps(6)} #{clamps(10)};
+    border: none;
+    border-radius: #{clamps(32)};
+    background: #191d23;
+
+    text-transform: uppercase;
+    font-size: #{clamps(10)};
+    @include text500();
+    color: $yellow;
+    font-family: $Jost !important;
+    text-transform: capitalize;
+  }
+}
+
+.ors_ClosedBetaComponent {
+  @include flexCenter();
+  gap: #{clamps(30)};
+  flex-wrap: wrap;
+  padding-right: #{clamps(34)};
+
+  text-transform: uppercase;
+  font-size: #{clamps(18)};
+  @include text400();
+  color: $white;
+  font-family: $Jost !important;
+  text-transform: capitalize;
+}
+
+// OurActivityComponent
+.OurActivityComponent {
+  position: relative;
+  background: $black;
+  width: 100%;
+  padding-bottom: #{clamps(175.8)};
+}
+
+.subtitle_OurActivityComponent {
+  background: linear-gradient(0deg, #ffeac4 0%, #ffb42f 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: #{clamps(30)};
+  @include text700();
+  font-family: $Jost !important;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: #{clamps(40)};
+  letter-spacing: #{clamps(2)};
+  margin-top: #{clamps(62)};
+}
+
+.title_OurActivityComponent {
+  font-size: #{clamps(38)};
+  @include text700();
+  font-family: $Jost !important;
+  color: $white;
+  text-transform: uppercase;
+  margin-bottom: #{clamps(122)};
+  text-align: center;
+  font-style: italic;
+}
+
+.carousels_OurActivityComponent {
+  width: fit-content;
+  overflow: scroll;
+  align-items: start !important;
+  @include flexCenter();
+  gap: 3.646vw;
+  padding: 5.208vw 15%;
+  z-index: 5;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.carousel_OurActivityComponent {
+  position: relative;
+}
+.carouselImg_OurActivityComponent {
+  @include BgImgContain();
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+
+.play_OurActivityComponent {
+  position: absolute;
+  top: 13vw;
+  left: 23.906vw;
+  z-index: 1;
+  cursor: pointer;
+  height: 5.313vw;
+  width: 5.313vw;
+}
+
+.carouselTitle_OurActivityComponent {
+  font-size: calc(42 * 100vw / 1920);
+  @include text700();
+  font-family: $Jost !important;
+  color: $white;
+  text-transform: lowercase;
+  text-align: center;
+  font-style: normal;
+  margin-top: #{clamps(30)};
+  margin-bottom: 0px;
+
+  &::first-letter {
+    text-transform: capitalize;
+  }
+}
+.carouselTitle_OurActivityComponent.inactive {
+  font-size: calc(37.8 * 100vw / 1920) !important;
+}
+
+.text_OurActivityComponent {
+  font-size: calc(24 * 100vw / 1920);
+  @include text400();
+  font-family: $Jost !important;
+  color: #787878;
+  text-align: center;
+  font-style: normal;
+  margin: 0px auto;
+  max-width: 30.365vw;
+}

@@ -379,3 +379,351 @@ export const TrailerGalleryComponent = () => {
     </article>
   );
 };
+
+export const ClosedBetaComponent = () => {
+  const downloads = [
+    { img: "/NFT_GAME/media/Link ⏵ download_btn.png.svg" },
+    { img: "/NFT_GAME/media/Link ⏵ play.png.svg" },
+    { img: "/NFT_GAME/media/Link.svg" },
+  ];
+
+  return (
+    <div
+      style={{
+        backgroundImage: "url('/NFT_GAME/media/image 66.svg')",
+      }}
+      className={styles.ClosedBetaComponent}
+    >
+      <header>
+        <div className={styles.subtitle_ClosedBetaComponent}>Play Our</div>
+        <div className={styles.title_ClosedBetaComponent}>closed beta now!</div>
+        <div className={styles.text_ClosedBetaComponent}>Download Now :</div>
+        <div className={styles.downloads_ClosedBetaComponent}>
+          {downloads.map(({ img }) => {
+            return <img src={img} alt="" />;
+          })}
+        </div>
+
+        <div className={styles.durationBox_ClosedBetaComponent}>
+          <img src="/NFT_GAME/media/Vector (20).svg" alt="" className="w-100" />
+          <div className={styles.duration_ClosedBetaComponent}>
+            <div>
+              <div className={styles.durationTitle_ClosedBetaComponent}>
+                The server are always Open between:
+              </div>
+              <div className={styles.durationText_ClosedBetaComponent}>
+                2-4 Pm & 7-10pm CET Time
+              </div>
+            </div>
+            <div className={styles.durationBtns__ClosedBetaComponent}>
+              {["1vs1", "3vs3"].map((item) => {
+                return (
+                  <div className={styles.durationBtn__ClosedBetaComponent}>
+                    {item}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+          <img src="/NFT_GAME/media/Vector (20).svg" alt="" className="w-100" />
+        </div>
+      </header>
+
+      <main className={styles.key_ClosedBetaComponent}>
+        <aside className={styles.aside_ClosedBetaComponent}>
+          <div className={styles.asideKey_ClosedBetaComponent}>
+            <img src="/NFT_GAME/media/key.png.svg" alt="" />
+            <div className="">
+              For our closed beta you need to have{" "}
+              <span className="yellow">a whitelist key.</span>
+            </div>
+          </div>
+          <div className={styles.asideTwitch_ClosedBetaComponent}>
+            <div className="">You can win a key on our discord join here</div>
+            <img src="/NFT_GAME/media/.svg" alt="" />
+          </div>
+          <div className={styles.noKey_ClosedBetaComponent}>
+            *If you don't have key, no worries read below
+          </div>
+          <div className={styles.info_ClosedBetaComponent}>
+            hold Tokens or NFTs to participate in our closed beta: In order to
+            get access to the closed beta,
+          </div>
+          <div className={styles.infoSmall_ClosedBetaComponent}>
+            you have to fulfil any one of the requirements below:
+          </div>
+          <div className={styles.or1_ClosedBetaComponent}>
+            <div className="">
+              Hold <span className="yellow">500k</span> $KATA TOKENS
+            </div>
+            <img src="/NFT_GAME/media/pseudo (2).svg" alt="" />
+          </div>
+          <div className={styles.or_ClosedBetaComponent}>
+            <img src="/NFT_GAME/media/ot.png.svg" alt="" className="w" />
+            <div className="">
+              <button className={styles.btn_Header}>Buy Here</button>
+            </div>
+          </div>
+          <div className={styles.or2_ClosedBetaComponent}>
+            <div className="">
+              Hold{" "}
+              <span className="yellow">1 Takeru Genesis Collection NFT</span>
+            </div>
+            <div className="">
+              <img src="/NFT_GAME/media/pseudo (3).svg" alt="" />
+            </div>
+          </div>
+          <div className={styles.or_ClosedBetaComponent}>
+            <img src="/NFT_GAME/media/ot.png.svg" alt="" className="w" />
+            <div className="">
+              <button className={styles.btn_Header}>Buy Here</button>
+            </div>
+          </div>
+          <div className={styles.or3_ClosedBetaComponent}>
+            <div className="">
+              Hold one of the below combinations for the
+              <br />
+              <span className="yellow">
+                GameZone Sword or Bluezilla Axe NFT's:
+              </span>
+            </div>
+            <div className="">
+              <img src="/NFT_GAME/media/pseudo (4).svg" alt="" />
+            </div>
+          </div>
+          <div className={styles.or_ClosedBetaComponent}>
+            <img src="/NFT_GAME/media/ot.png.svg" alt="" className="w" />
+            <div className="">
+              <button className={styles.btn_Header}>Buy Here</button>
+            </div>
+          </div>
+
+          <footer className={styles.ors_ClosedBetaComponent}>
+            {[
+              { text: "Immortal", id: "1x" },
+              { text: "Legendary", id: "1x " },
+              { text: " Common", id: "5x" },
+              { text: " Mystical", id: "2x" },
+              { text: " Rare", id: "3x" },
+            ].map(({ text, id }) => {
+              return (
+                <div className="">
+                  <span className="yellow">{id}</span> {text}
+                </div>
+              );
+            })}
+          </footer>
+        </aside>
+
+        <img
+          src="/NFT_GAME/media/Group 1000001316.svg"
+          alt=""
+          className={styles.keyImg_ClosedBetaComponent}
+        />
+      </main>
+    </div>
+  );
+};
+
+export const OurActivityComponent = () => {
+  const [active, setActive] = useState(2);
+
+  const downloads = [
+    { img: "/NFT_GAME/media/Link ⏵ download_btn.png.svg" },
+    { img: "/NFT_GAME/media/Link ⏵ play.png.svg" },
+    { img: "/NFT_GAME/media/Link.svg" },
+  ];
+
+  const carousels = [
+    {
+      id: "1",
+      text: "Tokyo Game Show 2022 | Katana Inu in Japan | Gamers loved our game",
+      desc: "The Katana Inu Team was from 15-18 August in #Tokyo Japan at Tokyo-Game Show. #tokyogameshow2022 #tgs We had a great time and the Japanese gamers fell in love with our game.",
+      img: "/NFT_GAME/media/6ef30ae04590f268bdada545b52602c1.png",
+    },
+    {
+      id: "2",
+      text: "Blockchain Economy July 2022 in Istanbul",
+      desc: "The Katana Inu Team was in Istanbul from 27-29 July at Blockchain Summit.We had a great time and meet a lot of potential partners, exchanges and influencers.",
+      img: "/NFT_GAME/media/div.ytp-cued-thumbnail-overlay-image.svg",
+    },
+    {
+      id: "3",
+      text: "World BlockChain summit March 2022 at Atlantis Hotel in Dubai",
+      desc: "The Katana Inu Team was on 23-24 March at World Blockchain Summit in Dubai and 16-17 March 2022 Crypto Expo Dubai.We had a great time and met a lot of potential partnerships and investors.",
+      img: "/NFT_GAME/media/e03023849099bef40407d74c753615bb.jpg",
+    },
+  ];
+
+  return (
+    <div className={styles.OurActivityComponent}>
+      <header>
+        <div className={styles.text_ClosedBetaComponent}>Download Now :</div>
+        <div className={styles.downloads_ClosedBetaComponent}>
+          {downloads.map(({ img }) => {
+            return <img src={img} alt="" />;
+          })}
+        </div>
+        <div className={styles.subtitle_OurActivityComponent}>
+          FULL OF ACTION
+        </div>
+        <div className={styles.title_OurActivityComponent}>
+          Our Activity on Events
+        </div>
+      </header>
+
+      <div className={styles.control_TrailerGalleryComponent}>
+        <img
+          onClick={() => (active > 1 ? setActive(active - 1) : null)}
+          style={{
+            transform: "rotate(180deg)",
+            visibility: active > 1 ? "" : "hidden",
+          }}
+          src="/NFT_GAME/media/Vector (19).svg"
+          alt=""
+        />
+        <img
+          onClick={() =>
+            active < carousels.length ? setActive(active + 1) : null
+          }
+          src="/NFT_GAME/media/Vector (19).svg"
+          alt=""
+          style={{ visibility: active < carousels.length ? "" : "hidden" }}
+        />
+      </div>
+
+      <article className="w-100 overflow-hidden">
+        <main
+          style={{
+            transform: active === 1 ? "translate(15%)" : "translate(-20%)",
+          }}
+          className={styles.carousels_OurActivityComponent}
+        >
+          {/* PREVIOUS CAROUSEL */}
+          {carousels.map(({ img, id, text, desc }) => {
+            const val = Number(id);
+            if (val === active - 1) {
+              return (
+                <div
+                  className={`${styles.carousel_OurActivityComponent} close`}
+                >
+                  <div
+                    style={{
+                      width: active === Number(id) ? "54.167vw" : "39.375vw",
+                      height: active === Number(id) ? "31.302vw" : "20.625vw",
+                      backgroundImage: `url('${img}')`,
+                    }}
+                    className={styles.carouselImg_OurActivityComponent}
+                  ></div>
+                  {active === Number(id) ? (
+                    <img
+                      src="/NFT_GAME/media/Group 1000001302.svg"
+                      alt=""
+                      className={styles.play_OurActivityComponent}
+                    />
+                  ) : (
+                    ""
+                  )}
+                  <div
+                    className={`${styles.carouselTitle_OurActivityComponent} ${styles.inactive}`}
+                  >
+                    {text}
+                  </div>
+                  <div className={styles.text_OurActivityComponent}>{desc}</div>
+                </div>
+              );
+            }
+          })}
+
+          {/* ACTIVE CAROUSEL */}
+          {carousels.map(({ img, id, text, desc }) => {
+            if (active === Number(id)) {
+              return (
+                <div
+                  className={`active ${styles.carousel_OurActivityComponent}`}
+                >
+                  <div
+                    style={{
+                      width: active === Number(id) ? "54.167vw" : "39.375vw",
+                      height: active === Number(id) ? "31.302vw" : "20.625vw",
+                      backgroundImage: `url('${img}')`,
+                    }}
+                    className={styles.carouselImg_OurActivityComponent}
+                  >
+                    {/* <div className="">
+                      <img
+                        src="/NFT_GAME/media/Link - Photo image of Katana Inu.svg"
+                        alt=""
+                        className={styles.play_OurActivityComponent}
+                      />
+                      <div className="">
+                        Katana Inu at Blockchain Economy in Istanbul 2022 | +
+                        Speech from Founder
+                      </div>
+                      <div className="">
+                        <img
+                          src="/NFT_GAME/media/ytp-id-8.svg"
+                          alt=""
+                          className={styles.play_OurActivityComponent}
+                        />
+                        <div className="">Share</div>
+                      </div>
+                    </div> */}
+                  </div>
+                  {active === Number(id) ? (
+                    <img
+                      src="/NFT_GAME/media/Group 1000001324.svg"
+                      alt=""
+                      className={styles.play_OurActivityComponent}
+                    />
+                  ) : (
+                    ""
+                  )}
+                  <div className={styles.carouselTitle_OurActivityComponent}>
+                    {text}
+                  </div>
+                  <div className={styles.text_OurActivityComponent}>{desc}</div>
+                </div>
+              );
+            }
+          })}
+
+          {/* NEXT CAROUSEL */}
+          {carousels.map(({ img, id, text, desc }) => {
+            const val = Number(id);
+            if (val === active + 1) {
+              return (
+                <div className={`${styles.carousel_OurActivityComponent} open`}>
+                  <img
+                    style={{
+                      width: active === Number(id) ? "54.167vw" : "39.375vw",
+                      height: active === Number(id) ? "31.302vw" : "20.625vw",
+                    }}
+                    src={img}
+                    alt=""
+                    className={styles.carouselImg_OurActivityComponent}
+                  />
+                  {active === Number(id) ? (
+                    <img
+                      src="/NFT_GAME/media/Group 1000001302.svg"
+                      alt=""
+                      className={styles.play_OurActivityComponent}
+                    />
+                  ) : (
+                    ""
+                  )}
+                  <div
+                    className={`${styles.carouselTitle_OurActivityComponent} ${styles.inactive}`}
+                  >
+                    {text}
+                  </div>
+                  <div className={styles.text_OurActivityComponent}>{desc}</div>
+                </div>
+              );
+            }
+          })}
+        </main>
+      </article>
+    </div>
+  );
+};

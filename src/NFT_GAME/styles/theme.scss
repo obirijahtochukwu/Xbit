@@ -2,6 +2,10 @@
   --vw: 100vw;
 }
 
+.yellow {
+  color: #f5a238;
+}
+
 $yellow: #f5a238;
 $white: #fff;
 $black: #030303;
@@ -15,6 +19,56 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+}
+
+.close {
+  padding-top: calc(150.8 * 100vw / 1920);
+  animation-name: close;
+  animation-duration: 1s;
+}
+
+@keyframes close {
+  from {
+    opacity: 0;
+    transform: translate(20%);
+  }
+  to {
+    transform: translate(0%);
+    opacity: 1;
+  }
+}
+
+.open {
+  padding-top: calc(150.8 * 100vw / 1920);
+  animation-name: open;
+  animation-duration: 0.5s;
+}
+
+@keyframes open {
+  from {
+    opacity: 0;
+    transform: translate(120%);
+  }
+  to {
+    transform: translate(0%);
+    opacity: 1;
+  }
+}
+
+.active {
+  animation-name: animate;
+  animation-duration: 1s;
+}
+
+@keyframes animate {
+  from {
+    opacity: 0;
+    transform: rotateY(70deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
 }
 
 @function scaleX($value) {
