@@ -176,6 +176,11 @@ body {
   font-weight: 700;
 }
 
+@mixin text800() {
+  font-family: $poppins;
+  font-weight: 800;
+}
+
 @mixin text900() {
   font-family: $poppins;
   font-weight: 900;

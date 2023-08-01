@@ -171,7 +171,8 @@ export const AboutTheGameComponent = () => {
   return (
     <div
       style={{
-        backgroundImage: "url('/NFT_GAME/media/image 66.svg')",
+        backgroundImage:
+          "linear-gradient(0deg, rgba(12, 12, 12, 0.00) 0%, rgba(0, 0, 0, 0.52) 100%),url('/NFT_GAME/media/image 66.svg')",
       }}
       className={styles.AboutTheGameComponent}
     >
@@ -390,7 +391,8 @@ export const ClosedBetaComponent = () => {
   return (
     <div
       style={{
-        backgroundImage: "url('/NFT_GAME/media/image 66.svg')",
+        backgroundImage:
+          "linear-gradient(0deg, rgba(12, 12, 12, 0.00) 0%, rgba(0, 0, 0, 0.52) 100%),url('/NFT_GAME/media/image 66.svg')",
       }}
       className={styles.ClosedBetaComponent}
     >
@@ -615,15 +617,7 @@ export const OurActivityComponent = () => {
                     }}
                     className={styles.carouselImg_OurActivityComponent}
                   ></div>
-                  {active === Number(id) ? (
-                    <img
-                      src="/NFT_GAME/media/Group 1000001302.svg"
-                      alt=""
-                      className={styles.play_OurActivityComponent}
-                    />
-                  ) : (
-                    ""
-                  )}
+
                   <div
                     className={`${styles.carouselTitle_OurActivityComponent} ${styles.inactive}`}
                   >
@@ -727,5 +721,171 @@ export const OurActivityComponent = () => {
         </main>
       </article>
     </div>
+  );
+};
+
+export const ChooseYourWarriorComponent = () => {
+  const [active, setActive] = useState(2);
+
+  const carousels = [
+    {
+      id: "1",
+      text: "Kape",
+      img: "/NFT_GAME/media/Img - A 3D model of a car. Use mouse, touch or arrow keys to move. ⏵ image.svg",
+    },
+    {
+      id: "2",
+      text: "Kape",
+      img: "/NFT_GAME/media/Img - A 3D model of a car. Use mouse, touch or arrow keys to move. ⏵ image (1).svg",
+    },
+    {
+      id: "3",
+      text: "Kape",
+      img: "/NFT_GAME/media/Img - A 3D model of a car. Use mouse, touch or arrow keys to move. ⏵ image (2).svg",
+    },
+  ];
+
+  return (
+    <article
+      style={{
+        backgroundImage:
+          "linear-gradient(0deg, rgba(12, 12, 12, 0.00) 0%, rgba(0, 0, 0, 0.52) 100%), url('/NFT_GAME/media/Section.svg')",
+      }}
+      className={styles.ChooseYourWarriorComponent}
+    >
+      <div className={styles.subtitle_OurActivityComponent}>
+        READY TO SLASH?
+      </div>
+      <div className={styles.title_OurActivityComponent}>
+        Choose your warrior
+      </div>
+
+      <section className={styles.section_ChooseYourWarriorComponent}>
+        <img
+          onClick={() => (active > 1 ? setActive(active - 1) : null)}
+          style={{
+            transform: "rotate(180deg)",
+            visibility: active > 1 ? "" : "hidden",
+          }}
+          src="/NFT_GAME/media/Vector (19).svg"
+          alt=""
+          className={styles.control_ChooseYourWarriorComponent}
+        />
+
+        <main className={styles.main_ChooseYourWarriorComponent}>
+          {active === 1 && (
+            <div
+              src={"img"}
+              alt=""
+              className={styles.carouselImg_ChooseYourWarriorComponent}
+            />
+          )}
+          {/* PREVIOUS CAROUSEL */}
+          {carousels.map(({ img, id }) => {
+            const val = Number(id);
+            if (val === active - 1) {
+              return (
+                <div
+                  className={`active ${styles.carousel_ChooseYourWarriorComponent}`}
+                >
+                  <img
+                    src={img}
+                    alt=""
+                    className={styles.carouselImg_ChooseYourWarriorComponent}
+                  />
+                </div>
+              );
+            }
+          })}
+          {/* ACTIVE CAROUSEL */}
+          {carousels.map(({ img, id, text }) => {
+            if (active === Number(id)) {
+              return (
+                <div
+                  className={`active ${styles.carousel_ChooseYourWarriorComponent}`}
+                >
+                  <img
+                    src={img}
+                    alt=""
+                    className={`${styles.carouselImg_ChooseYourWarriorComponent} ${styles.active}`}
+                  />
+
+                  <div
+                    className={styles.carouselTitle_ChooseYourWarriorComponent}
+                  >
+                    {text}
+                  </div>
+                </div>
+              );
+            }
+          })}
+          {/* NEXT CAROUSEL */}
+          {carousels.map(({ img, id, text }) => {
+            const val = Number(id);
+            if (val === active + 1) {
+              return (
+                <div
+                  className={`active ${styles.carousel_ChooseYourWarriorComponent}`}
+                >
+                  <img
+                    src={img}
+                    alt=""
+                    className={styles.carouselImg_ChooseYourWarriorComponent}
+                  />
+                </div>
+              );
+            }
+          })}
+          {active === carousels.length && (
+            <div
+              src={"img"}
+              alt=""
+              className={styles.carouselImg_ChooseYourWarriorComponent}
+            />
+          )}
+        </main>
+
+        <img
+          onClick={() =>
+            active < carousels.length ? setActive(active + 1) : null
+          }
+          src="/NFT_GAME/media/Vector (19).svg"
+          alt=""
+          style={{ visibility: active < carousels.length ? "" : "hidden" }}
+          className={styles.control_ChooseYourWarriorComponent}
+        />
+      </section>
+    </article>
+  );
+};
+
+export const NextPhaseComponent = () => {
+  return (
+    <section
+      style={{
+        backgroundImage:
+          "conic-gradient(from 180deg at 50.00% 50.00%, rgba(0, 0, 0, .8) 0deg, rgba(0, 0, 0, .8) 180deg), url('/NFT_GAME/media/36c97bb96e3f9290d71fc44ecb4f3a88.png')",
+      }}
+      className={styles.NextPhaseComponent}
+    >
+      <div
+        style={{ textAlign: "start" }}
+        className={styles.subtitle_OurActivityComponent}
+      >
+        Next Phase
+      </div>
+      <div className={styles.text_NextPhaseComponent}>
+        Closed Alpha Starting May 15th, 2023
+      </div>
+      <div className={styles.desc_NextPhaseComponent}>
+        Exciting news for gamers as the Closed Alpha for a highly anticipated
+        game is set to begin on May 15th, 2023. Closed Alpha testing is a
+        crucial stage in game development as it allows developers to test.
+      </div>
+
+      <div style={{ width: "fit-content" }} className={styles.btn_Header}>
+        Sign Up For Alpha
+      </div>
+    </section>
   );
 };

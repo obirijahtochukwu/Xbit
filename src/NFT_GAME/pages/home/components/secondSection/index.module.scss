@@ -1,0 +1,8 @@
+@import "../../../../styles/theme.scss";
+
+.container {
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: fit-content;
+  padding: #{clamps(175)} 0 0 0;
+}

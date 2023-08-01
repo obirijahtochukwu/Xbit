@@ -1,4 +1,4 @@
-@import "../../../styles/theme.scss";
+@import "../../../../styles/theme.scss";
 
 .HeaderComponent {
   background-position: center;
@@ -657,6 +657,23 @@
   margin-top: #{clamps(62)};
 }
 
+.subtext_OurActivityComponent {
+  background: linear-gradient(0deg, #ffeac4 0%, #ffb42f 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: #{clamps(20)};
+  @include text800();
+  font-family: $Jost !important;
+  text-transform: uppercase;
+  text-align: center;
+  font-style: italic;
+  line-height: #{clamps(24)};
+  letter-spacing: #{clamps(2)};
+  margin-top: #{clamps(62)};
+  margin-bottom: #{clamps(20)};
+}
+
 .title_OurActivityComponent {
   font-size: #{clamps(38)};
   @include text700();
@@ -719,9 +736,6 @@
   margin-right: #{clamps(10)};
 }
 
-// .carouselHeaderTitle_OurActivityComponent {
-// }
-
 .share_OurActivityComponent {
   margin-left: auto;
   display: flex;
@@ -762,4 +776,93 @@
   font-style: normal;
   margin: 0px auto;
   max-width: 30.365vw;
+}
+
+// ChooseYourWarriorComponent
+.ChooseYourWarriorComponent {
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-top: #{clamps(148)};
+  padding-bottom: #{clamps(50)};
+}
+
+.section_ChooseYourWarriorComponent {
+  @include flexCenter();
+  gap: #{clamps(40)};
+  width: fit-content;
+  margin: #{clamps(40)} auto 0 auto;
+}
+
+.main_ChooseYourWarriorComponent {
+  @include flexCenter();
+  gap: #{clamps(171)};
+  width: fit-content;
+  // margin: #{clamps(40)} auto 0 auto;
+}
+
+.carouselImg_ChooseYourWarriorComponent {
+  width: #{clamps(188)};
+  height: auto;
+  max-height: #{clamps(276)};
+}
+
+.carouselImg_ChooseYourWarriorComponent.active {
+  max-height: #{clamps(500)} !important;
+  height: #{clamps(760)} !important;
+  // max-height: fit-content;
+  width: #{clamps(349)} !important;
+}
+
+.control_ChooseYourWarriorComponent {
+  height: #{clamps(18)};
+  width: #{clamps(35)};
+  cursor: pointer;
+}
+
+.carouselTitle_ChooseYourWarriorComponent {
+  font-size: #{clamps(52)};
+  @include text700();
+  color: $white;
+  text-align: center;
+  font-style: italic;
+}
+
+// NextPhaseComponent
+.NextPhaseComponent {
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-top: #{clamps(288)};
+  padding-bottom: #{clamps(240)};
+  padding-left: #{clamps(110)};
+  @media (min-width: 1000px) {
+    padding-left: #{clamps(410)};
+  }
+}
+
+.text_NextPhaseComponent {
+  font-size: #{clamps(54)};
+  @include text700();
+  font-family: $Jost !important;
+  color: $white;
+  text-transform: uppercase;
+  line-height: #{clamps(70)};
+  width: #{clamps(716)};
+}
+
+.desc_NextPhaseComponent {
+  font-size: #{clamps(18)};
+  @include text400();
+  font-family: $Jost !important;
+  color: $white;
+  text-transform: uppercase;
+  line-height: #{clamps(28.8)};
+  width: #{clamps(592)};
+  opacity: 0.7;
+  margin-bottom: #{clamps(50)};
 }

@@ -1,0 +1,309 @@
+@import "../../../../../styles/theme.scss";
+
+// UltimateUtilityComponent
+.desc_UltimateUtilityComponent {
+  font-size: #{clamps(18)};
+  @include text400();
+  color: #787878;
+  text-transform: uppercase;
+  text-align: center;
+  width: #{clamps(843.37)};
+  margin: #{clamps(30)} auto #{clamps(98)} auto;
+}
+
+.main_UltimateUtilityComponent {
+  @include flexCenter();
+  gap: #{clamps(83)};
+  width: fit-content;
+  margin: 0 auto #{clamps(200)} auto;
+}
+
+.img_UltimateUtilityComponent {
+  width: #{clamps(652.8)};
+  height: #{clamps(535.53)};
+}
+
+.aside_UltimateUtilityComponent {
+  // @include BgImgContain();
+  background-position: 200% -50% !important;
+  background-repeat: no-repeat !important;
+  background-size: #{clamps(509)}, #{clamps(353)};
+  width: #{clamps(815.3)};
+  height: #{clamps(631.53)};
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+.tokens_UltimateUtilityComponent {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: #{clamps(45)};
+  margin-top: auto;
+}
+
+.token_UltimateUtilityComponent {
+  display: flex;
+  gap: #{clamps(5)};
+  padding: #{clamps(15)};
+  background: #151515;
+  border: #{clamps(1)} solid #2f2f2f;
+  border-radius: #{clamps(10)};
+
+  img {
+    width: #{clamps(80.38)};
+    height: #{clamps(64.2)};
+    object-fit: contain;
+  }
+}
+
+.tokenName_UltimateUtilityComponent {
+  font-size: #{clamps(28)};
+  @include text700();
+  font-family: $Jost !important;
+  color: $white;
+}
+
+.tokenDesc_UltimateUtilityComponent {
+  font-size: #{clamps(16)};
+  @include text400();
+  color: #b3b3b3;
+}
+
+// EcosystemFeaturesComponent
+.btns_Header {
+  margin-top: #{clamps(38)};
+}
+
+.main_EcosystemFeaturesComponent {
+  @include flexCenter();
+  gap: #{clamps(180)};
+  width: fit-content;
+  margin: #{clamps(139)} auto #{clamps(180)} auto;
+}
+
+.img_EcosystemFeaturesComponent {
+  width: #{clamps(448)};
+  height: #{clamps(420.553)};
+}
+
+.aside_EcosystemFeaturesComponent {
+  display: flex;
+  flex-direction: column;
+  gap: #{clamps(30)};
+}
+
+.asideTitle_EcosystemFeaturesComponent {
+  font-size: #{clamps(35)};
+  @include text700();
+  font-family: $Jost !important;
+  color: $white;
+  line-height: #{clamps(42)};
+  width: #{clamps(512.43)};
+}
+
+.infos_EcosystemFeaturesComponent {
+  display: flex;
+  flex-direction: column;
+  gap: #{clamps(10)};
+  width: #{clamps(512.43)};
+
+  font-size: #{clamps(15)};
+  @include text400();
+  color: #c9c7c7;
+  line-height: #{clamps(18)};
+}
+
+// UltimateJourneyComponent
+.title_UltimateJourneyComponent {
+  font-size: #{clamps(58)};
+  @include text700();
+  font-family: $Jost !important;
+  color: $white;
+  text-align: center;
+  margin-bottom: #{clamps(84)};
+}
+
+.phases_UltimateJourneyComponent {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.phases_UltimateJourneyComponent {
+  // width: 100%;
+  gap: 0;
+}
+
+.phaseSubtitle_UltimateJourneyComponent {
+  font-size: #{clamps(16)};
+  @include text500();
+  font-family: $Jost !important;
+  color: #848484;
+  padding-bottom: #{clamps(34)};
+  padding-left: #{clamps(50)};
+  border-bottom: #{clamps(1)} solid #848484;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: #{clamps(-8)};
+    left: 0;
+    width: #{clamps(13)};
+    height: #{clamps(13)};
+    border-radius: 100%;
+    background-color: #858585;
+    margin-left: #{clamps(50)};
+  }
+}
+
+.phasetitle_UltimateJourneyComponent {
+  font-size: #{clamps(25)};
+  @include text700();
+  font-family: $Jost !important;
+  color: $white;
+  margin: #{clamps(30)} 0;
+  padding-left: #{clamps(50)};
+}
+
+.steps_UltimateJourneyComponent {
+  display: flex;
+  flex-direction: column;
+  gap: #{clamps(7)};
+}
+
+.step_UltimateJourneyComponent {
+  @include flexCenter();
+  gap: #{clamps(5)};
+  padding-left: #{clamps(50)};
+
+  img {
+    background-color: #858585;
+    width: #{clamps(15)};
+    height: #{clamps(15.034)};
+    border-radius: #{clamps(5)};
+  }
+
+  font-size: #{clamps(16)};
+  @include text400();
+  font-family: $Jost !important;
+  color: $white;
+}
+
+.desc_UltimateJourneyComponent {
+  font-size: #{clamps(16)};
+  @include text400();
+  color: #787878;
+  line-height: #{clamps(24)};
+  max-width: #{clamps(1107.43)};
+  text-align: center;
+  margin: #{clamps(70)} auto #{clamps(140)} auto;
+}
+
+// DifferentRarityComponent
+.section_DifferentRarityComponent {
+  @include flexCenter();
+  gap: #{clamps(35)};
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.main_DifferentRarityComponent {
+  @include flexCenterBetween();
+  width: #{clamps(1410)};
+}
+
+.carouselImg_DifferentRarityComponent {
+  width: #{clamps(100)};
+  height: #{clamps(300)};
+}
+.carouselImg_DifferentRarityComponent.active {
+  height: #{clamps(700)} !important;
+  width: #{clamps(400)} !important;
+}
+
+.control_DifferentRarityComponent {
+  height: #{clamps(54)};
+  width: #{clamps(30)};
+  cursor: pointer;
+}
+
+.carouselTitle_DifferentRarityComponent {
+  font-size: #{clamps(52)};
+  @include text700();
+  color: $white;
+  text-align: center;
+  font-style: italic;
+}
+
+// InfluencerComponent
+.InfluencerComponent {
+  padding: #{clamps(154)} 0 #{clamps(200)} 0;
+}
+
+.influencers_InfluencerComponent {
+  @include flexCenter();
+  justify-content: center;
+  gap: #{clamps(60)};
+  margin-top: #{clamps(80)};
+
+  font-size: #{clamps(34)};
+  @include text600();
+  font-family: $Jost !important;
+  color: $white;
+  text-align: center;
+}
+
+.influencerImg_InfluencerComponent {
+  width: #{clamps(204)};
+  height: #{clamps(204)};
+  border-radius: 100%;
+}
+
+.influencerSocial_InfluencerComponent {
+  @include flexCenter();
+  justify-content: center;
+  gap: #{clamps(14)};
+  margin-top: #{clamps(12)};
+
+  img {
+    width: #{clamps(27)};
+    height: #{clamps(22)};
+  }
+}
+
+// PartnersComponent
+.partners_PartnersComponent {
+  display: flex;
+  gap: #{clamps(20)};
+  width: 95%;
+  margin: #{clamps(80)} auto 0 auto;
+  max-width: #{clamps(1290)};
+}
+
+.partner_PartnersComponent {
+  display: flex;
+  flex-direction: column;
+  gap: #{clamps(20)};
+  width: #{clamps(242)};
+}
+
+// GamePartnersComponent
+.GamePartnersComponent {
+  padding: #{clamps(180)} 0;
+  background: linear-gradient(0deg, rgb(0, 0, 0, 0.9), rgb(0, 0, 0, 0.1));
+}
+
+.partners_GamePartnersComponent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: #{clamps(80)};
+  width: 95%;
+  margin: #{clamps(50)} auto 0 auto;
+  max-width: #{clamps(1233)};
+
+  img {
+    height: auto;
+    width: #{clamps(133)};
+  }
+}
