@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./index.module.scss";
+import Navbar from "../layout/header/Index";
 
 export const HeaderComponent = () => {
   const buttons = [
@@ -16,13 +17,13 @@ export const HeaderComponent = () => {
       }}
       className={styles.HeaderComponent}
     >
+      <Navbar />
       <div
         style={{
           backgroundImage: "url('/NFT_GAME/media/title.svg')",
         }}
         className={styles.imgTitle}
       ></div>
-
       <main className={styles.btns_Header}>
         {buttons.map(({ text }) => {
           return (

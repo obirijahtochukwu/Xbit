@@ -10,6 +10,7 @@ import {
   WhatIsKatanaComponent,
 } from "./components/firstSection/Index";
 import SecondSection from "./components/secondSection/Index";
+import Footer from "./components/layout/footer/Index";
 
 export default function Index() {
   return (
@@ -26,6 +27,8 @@ export default function Index() {
 
       {/* SECOND SECTION */}
       <SecondSection />
+
+      <Footer />
     </div>
   );
 }

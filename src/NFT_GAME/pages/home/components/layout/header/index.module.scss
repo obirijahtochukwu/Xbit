@@ -1,0 +1,25 @@
+@import "../../../../../styles/theme.scss";
+
+.header {
+  @include flexCenterBetween();
+  width: 100%;
+  backdrop-filter: blur(#{clamps(5)});
+  max-width: #{clamps(1452.72)};
+  margin: 0 auto;
+
+  font-size: #{clamps(18)};
+  @include text400();
+  color: $white !important;
+  text-transform: uppercase;
+  line-height: #{clamps(23.4)};
+
+  img {
+    width: #{clamps(68.712)};
+    height: #{clamps(70.228)};
+  }
+}
+
+.main {
+  @include flexCenter();
+  gap: #{clamps(45)};
+}

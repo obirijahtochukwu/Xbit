@@ -1,0 +1,144 @@
+@import "../../../../../styles/theme.scss";
+
+.footer {
+  width: 90%;
+  max-width: #{clamps(1419)};
+  margin: 0 auto;
+  padding: #{clamps(160)} 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: #{clamps(115)};
+  // background-color: #0c0c0c;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: calc((100% - #{clamps(890)}) / 2);
+    width: 100%;
+    // margin: 0 auto;
+    max-width: #{clamps(890)};
+    height: #{clamps(1)};
+    background-color: rgb(57, 57, 57, 0.1);
+    box-shadow: 0 #{clamps(5)} #{clamps(100)} #{clamps(5)} #bdb8b8;
+  }
+}
+
+.footerLogo {
+  width: #{clamps(261.8)};
+  height: #{clamps(103)};
+}
+
+.footerIcon {
+  margin-left: auto;
+  @include flexCenter();
+  gap: #{clamps(20)};
+
+  img {
+    height: #{clamps(27)};
+    width: auto;
+  }
+}
+
+.mail {
+  width: 100%;
+  max-width: #{clamps(358)};
+}
+
+.hint_mail {
+  font-size: #{clamps(16)};
+  @include text400();
+  font-family: $Jost !important;
+  color: $white;
+  text-transform: uppercase;
+  line-height: #{clamps(19.2)};
+}
+
+.box_mail {
+  @include flexCenter();
+  gap: #{clamps(8)};
+  height: #{clamps(61)};
+  width: 100%;
+  padding-left: #{clamps(20)};
+  border: #{clamps(1)} solid #414141;
+  border-radius: #{clamps(40)};
+  margin: #{clamps(24)} 0 #{clamps(56)} 0;
+
+  input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: #{clamps(14)};
+    @include text400();
+    color: $white;
+    background-color: transparent;
+    outline: none;
+
+    ::placeholder {
+      color: #414141;
+    }
+  }
+}
+
+.btn_mail {
+  cursor: pointer;
+  @include flexCenter();
+  justify-content: center;
+  gap: #{clamps(8)};
+  width: #{clamps(125)};
+  height: #{clamps(61)};
+  background: rgba(255, 255, 255, 0);
+  border: #{clamps(1)} solid #f3a511;
+  border-radius: #{clamps(50)};
+  box-shadow: 0px 0px #{clamps(24.25)} #{clamps(1.75)} rgba(255, 187, 66, 0.75)
+    inset;
+  font-size: #{clamps(14)};
+  @include text400();
+  font-family: $Jost !important;
+  color: $white;
+}
+
+.text_mail {
+  font-size: #{clamps(14)};
+  @include text400();
+  font-family: $Jost !important;
+  color: $white;
+  line-height: #{clamps(21)};
+  margin-top: #{clamps(21)};
+}
+
+.links_footer {
+  display: flex;
+  flex-direction: column;
+  gap: #{clamps(21)};
+}
+
+.post {
+  @include flexCenter();
+  width: #{clamps(248)};
+  gap: #{clamps(15)};
+  margin-top: #{clamps(20)};
+  margin-bottom: #{clamps(26)};
+
+  img {
+    width: #{clamps(112)};
+    height: #{clamps(74.808)};
+  }
+
+  font-size: #{clamps(14)};
+  @include text500();
+  font-family: $Jost !important;
+  color: $white;
+  line-height: #{clamps(16.8)};
+}
+
+.footerText {
+  font-size: #{clamps(14)};
+  @include text500();
+  font-family: $Jost !important;
+  color: $white;
+  text-align: center;
+  margin: #{clamps(75)} 0 #{clamps(44)} 0;
+}
