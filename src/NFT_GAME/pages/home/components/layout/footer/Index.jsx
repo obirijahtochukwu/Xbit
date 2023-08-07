@@ -60,7 +60,7 @@ export default function Footer() {
   return (
     <>
       <div className={styles.footer}>
-        <div className={"d-flex align-items-center"}>
+        <div className={"d-flex flex-column flex-sm-row align-items-center "}>
           <img
             src="/NFT_GAME/media/Link ⏵ footer_logo.png.svg"
             alt=""
@@ -73,7 +73,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <main className="d-flex align-items-start justify-content-between">
+        <main className="d-flex align-items-start justify-content-between flex-wrap">
           <section className={styles.mail}>
             <div className={styles.hint_mail}>Don't miss our latest news</div>
             <aside className={styles.box_mail}>
@@ -92,7 +92,9 @@ export default function Footer() {
           {links.map(({ title, subtext }) => {
             return (
               <section className={styles.links_footer}>
-                <div className={styles.hint_mail}>{title}</div>
+                <div style={{ fontWeight: "700" }} className={styles.hint_mail}>
+                  {title}
+                </div>
                 {subtext.map(({ text, url }) => {
                   return (
                     <a
@@ -107,21 +109,25 @@ export default function Footer() {
               </section>
             );
           })}
-          <section>
+          <section className={styles.postsBox}>
+            <hr className="d-md-none" />
             <div className={styles.hint_mail}>Latest Posts</div>
-            {posts.map(({ img, date, desc }) => {
-              return (
-                <div className={styles.post}>
-                  <img src={img} alt="" />
-                  <div className="">
-                    <div style={{ opacity: "0.5" }} className="">
-                      {date}
+
+            <div className={styles.posts}>
+              {posts.map(({ img, date, desc }) => {
+                return (
+                  <div className={styles.post}>
+                    <img src={img} alt="" />
+                    <div className="">
+                      <div style={{ opacity: "0.5" }} className="">
+                        {date}
+                      </div>
+                      <div className={styles.postDesc}>`{desc}</div>
                     </div>
-                    <div className={styles.postDesc}>`{desc}</div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </section>
         </main>
       </div>

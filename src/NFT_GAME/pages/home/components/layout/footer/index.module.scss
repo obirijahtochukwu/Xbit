@@ -142,3 +142,157 @@
   text-align: center;
   margin: #{clamps(75)} 0 #{clamps(44)} 0;
 }
+
+@media (max-width: 750px) {
+  .footer {
+    width: 100%;
+    padding: #{sm(100)} #{sm(16)} 0 #{sm(16)};
+    gap: #{sm(30)};
+
+    &::before {
+      left: calc((100% - #{sm(300)}) / 2);
+      max-width: #{sm(300)};
+      height: #{sm(1)};
+      box-shadow: 0 #{sm(5)} #{sm(50)} #{sm(2)} #bdb8b8;
+    }
+  }
+
+  .footerLogo {
+    margin-right: auto;
+    width: #{sm(150.8)};
+    height: #{sm(103)};
+  }
+
+  .footerIcon {
+    margin: #{sm(20)} auto 0 0;
+    @include flexCenter();
+    gap: #{sm(15)};
+
+    img {
+      height: #{sm(20)};
+      width: auto;
+    }
+  }
+
+  .mail {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hint_mail {
+    font-size: #{sm(16)};
+    line-height: #{sm(19.2)};
+  }
+
+  .box_mail {
+    gap: #{sm(8)};
+    height: #{sm(61)};
+    padding-left: #{sm(20)};
+    border-radius: #{sm(40)};
+    margin: #{sm(24)} 0 #{sm(56)} 0;
+
+    input {
+      font-size: #{sm(15)};
+    }
+  }
+
+  .btn_mail {
+    gap: #{sm(8)};
+    width: #{sm(125)};
+    height: #{sm(61)};
+    border-radius: #{sm(50)};
+    box-shadow: 0px 0px #{sm(24.25)} #{sm(1.75)} rgba(255, 187, 66, 0.75) inset;
+    font-size: #{sm(14)};
+  }
+
+  .text_mail {
+    font-size: #{sm(16)};
+    line-height: #{sm(25)};
+    margin-top: #{sm(10)};
+  }
+
+  .links_footer {
+    gap: #{sm(21)};
+    margin-top: #{sm(25)};
+  }
+
+  .postsBox {
+    width: 100%;
+    margin-top: #{sm(21)};
+  }
+
+  .post {
+    width: 100%;
+    gap: #{sm(15)};
+    margin-top: #{sm(20)};
+    margin-bottom: #{sm(26)};
+
+    img {
+      width: #{sm(112)};
+      height: #{sm(74.808)};
+    }
+
+    font-size: #{sm(16)};
+    @include text500();
+    font-family: $Jost !important;
+    color: $white;
+    line-height: #{sm(26.8)};
+  }
+
+  .footerText {
+    font-size: #{sm(14)};
+    text-align: center;
+    margin: #{sm(75)} auto #{sm(44)} auto;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 1200px) {
+  .mail {
+    width: #{md(558)};
+    max-width: #{md(958)};
+  }
+
+  .hint_mail {
+    font-size: #{md(25)};
+    line-height: #{md(40.2)};
+  }
+
+  .box_mail {
+    input {
+      font-size: #{md(22)};
+    }
+  }
+
+  .btn_mail {
+    font-size: #{md(25)};
+  }
+
+  .text_mail {
+    font-size: #{md(25)};
+    line-height: #{md(36)};
+    margin-top: #{md(21)};
+  }
+
+  .posts {
+    @include flexCenter();
+    gap: #{md(30)};
+    flex-wrap: wrap;
+  }
+
+  .post {
+    width: #{md(400)};
+    gap: #{md(20)};
+
+    img {
+      width: #{md(212)};
+      height: #{md(104.808)};
+    }
+
+    font-size: #{md(20)};
+    line-height: #{md(30.8)};
+  }
+
+  .footerText {
+    font-size: #{md(22)};
+  }
+}

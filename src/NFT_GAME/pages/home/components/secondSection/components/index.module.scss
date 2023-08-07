@@ -1,5 +1,7 @@
 @import "../../../../../styles/theme.scss";
-
+.sm {
+  display: none !important;
+}
 // UltimateUtilityComponent
 .desc_UltimateUtilityComponent {
   font-size: #{clamps(18)};
@@ -24,7 +26,6 @@
 }
 
 .aside_UltimateUtilityComponent {
-  // @include BgImgContain();
   background-position: 200% -50% !important;
   background-repeat: no-repeat !important;
   background-size: #{clamps(509)}, #{clamps(353)};
@@ -305,5 +306,376 @@
   img {
     height: auto;
     width: #{clamps(133)};
+  }
+}
+
+@media (max-width: 750px) {
+  .sm {
+    display: flex !important;
+  }
+
+  .hidSm {
+    display: none !important;
+  }
+
+  // UltimateUtilityComponent
+  .desc_UltimateUtilityComponent {
+    font-size: #{sm(16)};
+    width: 100%;
+    padding: 0 #{sm(16)};
+    margin: #{sm(20)} auto #{sm(0)} auto;
+  }
+
+  .main_UltimateUtilityComponent {
+    flex-direction: column;
+    gap: #{sm(40)};
+    padding: 0 #{sm(16)};
+    margin: 0 auto #{sm(200)} auto;
+    width: 100%;
+  }
+
+  .img_UltimateUtilityComponent {
+    width: 100%;
+    height: #{sm(450.53)};
+    margin: 0 auto;
+  }
+
+  .aside_UltimateUtilityComponent {
+    background-position: #{sm(20)} #{sm(-50)} !important;
+    background-size: #{sm(409)} #{sm(253)} !important;
+    width: 100%;
+    max-width: 500px;
+    height: #{sm(750.53)};
+  }
+
+  .tokens_UltimateUtilityComponent {
+    grid-template-columns: auto;
+    gap: #{sm(16)};
+  }
+
+  .token_UltimateUtilityComponent {
+    gap: #{sm(5)};
+    padding: #{sm(15)};
+
+    img {
+      width: #{sm(80.38)};
+      height: #{sm(64.2)};
+    }
+  }
+
+  .tokenName_UltimateUtilityComponent {
+    font-size: #{sm(28)};
+  }
+
+  .tokenDesc_UltimateUtilityComponent {
+    font-size: #{sm(16)};
+  }
+
+  // EcosystemFeaturesComponent
+  .btns_Header {
+    flex-wrap: nowrap !important;
+    margin-top: #{sm(28)};
+    padding: 0 #{sm(16)};
+    margin-left: 0 !important;
+    justify-content: start !important;
+  }
+
+  .main_EcosystemFeaturesComponent {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: #{sm(20)};
+    width: 100%;
+    padding: 0 #{sm(16)};
+    margin: #{sm(40)} auto #{sm(180)} auto;
+  }
+
+  .img_EcosystemFeaturesComponent {
+    width: #{sm(300)};
+    height: #{sm(420)};
+  }
+
+  .aside_EcosystemFeaturesComponent {
+    gap: #{sm(20)};
+  }
+
+  .asideTitle_EcosystemFeaturesComponent {
+    font-size: #{sm(32)};
+    line-height: #{sm(42)};
+    width: 100%;
+  }
+
+  .infos_EcosystemFeaturesComponent {
+    gap: #{sm(10)};
+    width: 100%;
+    font-size: #{sm(15)};
+    line-height: #{sm(18)};
+  }
+
+  // UltimateJourneyComponent
+  .title_UltimateJourneyComponent {
+    font-size: #{sm(42)};
+    margin-bottom: #{sm(50)};
+  }
+
+  .phases_UltimateJourneyComponent {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: #{sm(40)} 0;
+  }
+
+  .phaseSubtitle_UltimateJourneyComponent {
+    font-size: #{sm(16)};
+    padding-bottom: #{sm(20)};
+    padding-left: #{sm(16)};
+    border-bottom: #{sm(1)} solid #848484;
+
+    &::before {
+      bottom: #{sm(-6.5)};
+      width: #{sm(13)};
+      height: #{sm(13)};
+      margin-left: #{sm(16)};
+    }
+  }
+
+  .phasetitle_UltimateJourneyComponent {
+    font-size: #{sm(25)};
+    margin: #{sm(20)} 0;
+    padding-left: #{sm(16)};
+  }
+
+  .steps_UltimateJourneyComponent {
+    gap: #{sm(10)};
+    padding-right: #{sm(10)};
+  }
+
+  .step_UltimateJourneyComponent {
+    @include flexCenter();
+    gap: #{sm(5)};
+    padding-left: #{sm(16)};
+
+    img {
+      width: #{sm(15)};
+      height: #{sm(15.034)};
+      border-radius: #{sm(5)};
+    }
+
+    font-size: #{sm(16)};
+  }
+
+  .desc_UltimateJourneyComponent {
+    font-size: #{sm(16)};
+    line-height: #{sm(24)};
+    max-width: 100%;
+    padding: #{sm(16)};
+    margin: #{sm(40)} auto #{sm(100)} auto;
+  }
+
+  .md {
+    display: none !important;
+  }
+
+  // DifferentRarityComponent
+  .section_DifferentRarityComponent {
+    gap: #{sm(16)};
+    padding: 0 #{sm(16)};
+    width: 100%;
+  }
+
+  .main_DifferentRarityComponent {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .carouselImg_DifferentRarityComponent.active {
+    max-height: #{sm(500)} !important;
+    width: #{sm(300)} !important;
+  }
+
+  .control_DifferentRarityComponent {
+    height: #{sm(34)};
+    width: #{sm(20)};
+  }
+
+  .carouselTitle_DifferentRarityComponent {
+    font-size: #{sm(382)};
+  }
+
+  // InfluencerComponent
+  .InfluencerComponent {
+    padding: #{sm(100)} 0 #{sm(140)} 0;
+  }
+
+  .influencers_InfluencerComponent {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: #{sm(60)};
+    padding: 0 #{sm(16)};
+    margin-top: #{sm(40)};
+    width: 100%;
+    font-size: #{sm(28)};
+  }
+
+  .influencerImg_InfluencerComponent {
+    width: #{sm(134)};
+    height: #{sm(134)};
+    border-radius: 100%;
+  }
+
+  .influencerSocial_InfluencerComponent {
+    gap: #{sm(14)};
+    margin-top: #{sm(6)};
+
+    img {
+      width: #{sm(20)};
+      height: #{sm(15)};
+    }
+  }
+
+  // PartnersComponent
+  .partners_PartnersComponent {
+    display: flex;
+    gap: #{sm(20)};
+    width: 100%;
+    padding: 0 #{sm(16)};
+    margin: #{sm(40)} 0 0 0;
+  }
+
+  .partner_PartnersComponent {
+    gap: #{sm(20)};
+    width: calc(108 * (100vw / 390));
+  }
+
+  // GamePartnersComponent
+  .GamePartnersComponent {
+    padding: #{sm(150)} 0;
+  }
+
+  .partners_GamePartnersComponent {
+    gap: #{sm(16)};
+    padding: 0 #{sm(16)};
+    width: 100%;
+    margin: #{sm(50)} auto 0 auto;
+
+    img {
+      height: auto;
+      width: #{sm(108)};
+    }
+  }
+}
+
+@media (min-width: 750px) and (max-width: 1200px) {
+  .hidMd {
+    display: none !important;
+  }
+  // UltimateUtilityComponent
+  .main_UltimateUtilityComponent {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: #{md(83)};
+  }
+
+  .img_UltimateUtilityComponent {
+    width: #{md(852.8)};
+    height: #{md(735.53)};
+  }
+
+  .aside_UltimateUtilityComponent {
+    background-position: #{md(594)} #{md(54)} !important;
+    background-size: #{md(620)} #{md(393)} !important;
+    width: #{md(1200.3)};
+    height: #{md(1031.53)};
+  }
+
+  .tokens_UltimateUtilityComponent {
+    gap: #{md(45)};
+  }
+
+  .token_UltimateUtilityComponent {
+    gap: #{md(15)};
+    padding: #{md(30)};
+    border: #{md(1)} solid #2f2f2f;
+    border-radius: #{md(10)};
+  }
+
+  .tokenName_UltimateUtilityComponent {
+    font-size: #{md(42)};
+  }
+
+  .tokenDesc_UltimateUtilityComponent {
+    font-size: #{md(25)};
+  }
+
+  // EcosystemFeaturesComponent
+  .main_EcosystemFeaturesComponent {
+    align-items: start;
+    gap: #{md(100)};
+  }
+
+  .img_EcosystemFeaturesComponent {
+    width: #{md(448)};
+    height: #{md(420.553)};
+  }
+
+  .aside_EcosystemFeaturesComponent {
+    gap: #{md(30)};
+  }
+
+  .asideTitle_EcosystemFeaturesComponent {
+    font-size: #{md(45)};
+    line-height: #{md(60)};
+    width: #{md(592.43)};
+  }
+
+  .infos_EcosystemFeaturesComponent {
+    gap: #{md(20)};
+    width: #{md(592.43)};
+
+    font-size: #{md(22)};
+    line-height: #{md(35)};
+  }
+
+  // UltimateJourneyComponent
+  .step_UltimateJourneyComponent {
+    div {
+      img {
+        background-color: #858585;
+        width: #{clamps(15)};
+        height: #{clamps(15.034)};
+        border-radius: #{clamps(5)};
+      }
+    }
+
+    font-size: #{md(24)};
+  }
+
+  .desc_UltimateJourneyComponent {
+    font-size: #{md(24)};
+    line-height: #{md(35)};
+    max-width: 80%;
+  }
+
+  // DifferentRarityComponent
+  .section_DifferentRarityComponent {
+    width: #{md(1200)};
+  }
+
+  // PartnersComponent
+  .partners_PartnersComponent {
+    width: #{md(1200)};
+  }
+
+  .partner_PartnersComponent {
+    gap: #{md(20)};
+    width: #{md(280)};
+  }
+
+  // GamePartnersComponent
+  .partners_GamePartnersComponent {
+    gap: #{md(80)};
+    width: #{md(1200)};
+
+    img {
+      width: #{md(160)};
+    }
   }
 }

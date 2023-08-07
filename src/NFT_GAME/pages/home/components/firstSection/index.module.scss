@@ -1,5 +1,13 @@
 @import "../../../../styles/theme.scss";
 
+.sm {
+  display: none;
+}
+
+.invisible_md {
+  visibility: hidden;
+}
+
 .HeaderComponent {
   background-position: center;
   background-repeat: no-repeat;
@@ -580,7 +588,6 @@
   padding: #{clamps(10)} #{clamps(20)};
   margin-top: #{clamps(10)};
   img {
-    cursor: pointer;
     object-fit: contain;
     width: #{clamps(49)};
     height: #{clamps(59)};
@@ -865,4 +872,1365 @@
   width: #{clamps(592)};
   opacity: 0.7;
   margin-bottom: #{clamps(50)};
+}
+
+@media (max-width: 750px) {
+  .invisible_sm {
+    visibility: hidden;
+  }
+
+  .HeaderComponent {
+    height: 100vh;
+    padding: #{sm(58)} 0 #{sm(90)} 0;
+  }
+
+  .imgTitle {
+    width: #{sm(254)};
+    height: #{sm(52)};
+  }
+
+  .btns_Header {
+    flex-wrap: wrap;
+    gap: #{sm(10)};
+    padding: 0 #{sm(32)};
+  }
+
+  .btn_Header {
+    gap: #{sm(3)};
+    padding: #{sm(8)} #{sm(19)};
+    border: #{sm(1)} solid $yellow;
+    border-radius: #{sm(32)};
+    font-size: #{sm(16)};
+  }
+
+  // WhatIsKatanaComponent
+  .WhatIsKatanaComponent {
+    gap: #{sm(60)};
+    padding: #{sm(100)} #{sm(16)};
+  }
+
+  .logos {
+    flex-wrap: wrap;
+    gap: #{sm(32)};
+
+    img {
+      width: #{sm(110)};
+      height: #{sm(62)};
+    }
+  }
+
+  .title_WhatIsKatanaComponent {
+    font-size: #{sm(32)};
+  }
+
+  .box_WhatIsKatanaComponent {
+    flex-direction: column;
+    gap: #{sm(50)};
+  }
+
+  .img_WhatIsKatanaComponent {
+    width: #{sm(358)};
+    height: #{sm(400)};
+  }
+
+  .answers_WhatIsKatanaComponent {
+    gap: #{sm(15)};
+    margin: #{sm(30)} auto #{sm(40)} auto;
+  }
+
+  .answer_WhatIsKatanaComponent {
+    gap: #{sm(10)};
+    max-width: 100%;
+
+    img {
+      width: #{sm(15)};
+      height: #{sm(15)};
+    }
+
+    font-size: #{sm(16)};
+    @include text400();
+    color: $white;
+    line-height: #{sm(28)};
+  }
+
+  // AboutTheGameComponent
+  .AboutTheGameComponent {
+    padding: #{sm(100)} #{sm(16)} #{sm(240)} #{sm(16)};
+  }
+
+  .title_AboutTheGameComponent {
+    font-size: #{sm(46)};
+  }
+
+  .text_AboutTheGameComponent {
+    font-size: #{sm(16)};
+    width: auto;
+  }
+
+  .cards_AboutTheGameComponent {
+    margin: #{sm(50)} auto #{sm(65)} auto;
+    flex-wrap: wrap;
+    gap: #{sm(32)};
+  }
+
+  .card_AboutTheGameComponent {
+    height: #{sm(400)};
+    width: #{sm(300)};
+    border-radius: #{sm(15)};
+    backdrop-filter: blur(#{sm(30)});
+    margin: 0 auto;
+    padding: 0 #{sm(16)} #{sm(16)} #{sm(16)};
+  }
+
+  .cardImg_AboutTheGameComponent {
+    height: #{sm(200)};
+    width: #{sm(310)};
+    top: #{sm(-10)};
+    left: #{sm(-17)};
+  }
+
+  .top {
+    top: #{sm(-20)} !important;
+  }
+
+  .cardSubtitle_AboutTheGameComponent {
+    font-size: #{sm(14)};
+    line-height: #{sm(19.2)};
+    letter-spacing: #{sm(7)};
+  }
+
+  .cardTitle_AboutTheGameComponent {
+    font-size: #{sm(20)};
+    line-height: #{sm(28.2)};
+    margin: #{sm(5)} 0 #{sm(10)} 0;
+  }
+
+  .cardDesc_AboutTheGameComponent {
+    font-size: #{sm(16)};
+    line-height: #{sm(20.6)};
+    margin: 0 auto #{sm(20)} auto;
+    width: auto;
+  }
+
+  .mints_AboutTheGameComponent {
+    flex-direction: column;
+    gap: #{sm(50.87)};
+    padding: 0 #{sm(10)};
+    margin: #{sm(103)} auto #{sm(65)} auto;
+  }
+
+  .mint_AboutTheGameComponent {
+    width: 100%;
+    height: fit-content;
+    max-width: 400px;
+    padding: 0 0 #{sm(26)} #{sm(16)};
+    border-radius: #{sm(15)};
+    z-index: 1;
+    margin: 0 auto;
+  }
+
+  .mintLogo_AboutTheGameComponent {
+    width: #{sm(40)};
+    height: #{sm(37)};
+    margin-right: #{sm(10)};
+  }
+
+  .mintText_AboutTheGameComponent {
+    font-size: #{sm(14)};
+  }
+
+  .mintTitle__AboutTheGameComponent {
+    font-size: #{sm(24)};
+    margin-top: #{sm(20)};
+  }
+
+  .mintDesc__AboutTheGameComponent {
+    font-size: #{sm(15)};
+    line-height: #{sm(24)};
+    width: #{sm(288.39)};
+    display: flex;
+    flex-direction: column;
+    gap: #{sm(20)};
+    margin: #{sm(10)} 0;
+    z-index: 2;
+  }
+
+  .mintsmall_AboutTheGameComponent {
+    font-size: #{clamps(8)};
+    font-family: $poppins;
+    font-weight: 600;
+    color: $yellow;
+  }
+
+  .mintImg__AboutTheGameComponent {
+    position: absolute;
+    top: #{sm(-63)};
+    left: #{sm(250)};
+    width: #{sm(176)};
+    height: #{sm(320)};
+    z-index: -1;
+
+    @media (max-width: 390px) {
+      display: none;
+    }
+  }
+
+  // TrailerGalleryComponent
+  .md {
+    display: none !important;
+  }
+  .sm {
+    display: block;
+  }
+  .TrailerGalleryComponent {
+    padding: #{sm(50)} 0 !important;
+    max-height: fit-content;
+  }
+
+  .control_TrailerGalleryComponent {
+    top: 40%;
+    padding: 0 #{sm(32)};
+
+    img {
+      height: #{sm(37)};
+      width: #{sm(20)};
+    }
+  }
+
+  .carouselImg_TrailerGalleryComponent {
+    width: #{sm(250)};
+    height: #{sm(200)};
+    object-fit: cover;
+    border: 0.051vw solid $yellow;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .play_TrailerGalleryComponent {
+    top: #{sm(90)};
+    height: #{sm(30)};
+    width: #{sm(30)};
+  }
+
+  .title_TrailerGalleryComponent {
+    font-size: #{sm(20)};
+    margin-top: #{sm(13)};
+  }
+
+  .bg_TrailerGalleryComponent {
+    bottom: #{sm(190)};
+    left: #{sm(100)};
+  }
+
+  // ClosedBetaComponent
+  .ClosedBetaComponent {
+    padding-top: #{sm(120)};
+    padding-bottom: #{sm(100.8)};
+  }
+
+  .subtitle_ClosedBetaComponent {
+    font-size: #{sm(32)};
+    line-height: #{sm(40)};
+  }
+
+  .title_ClosedBetaComponent {
+    font-size: #{sm(46)};
+    margin-bottom: #{sm(26)};
+  }
+
+  .text_ClosedBetaComponent {
+    font-size: #{sm(26)};
+  }
+
+  .downloads_ClosedBetaComponent {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: #{sm(16)};
+    width: fit-content;
+    margin: #{sm(20)} auto;
+    img {
+      width: #{sm(110)};
+    }
+  }
+
+  .durationBox_ClosedBetaComponent {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .duration_ClosedBetaComponent {
+    gap: #{sm(30)};
+    padding: #{sm(16)};
+  }
+
+  .durationTitle_ClosedBetaComponent {
+    font-size: #{sm(16)};
+    line-height: #{sm(26)};
+  }
+
+  .durationText_ClosedBetaComponent {
+    font-size: #{sm(14)};
+  }
+
+  .durationBtns__ClosedBetaComponent {
+    gap: #{sm(5)};
+  }
+  .durationBtn__ClosedBetaComponent {
+    cursor: pointer;
+    padding: #{sm(6)} #{sm(13)};
+    border: #{sm(1)} solid $yellow;
+    border-radius: #{sm(18)};
+    font-size: #{sm(16)};
+  }
+
+  .key_ClosedBetaComponent {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    gap: #{sm(60)};
+    width: 100%;
+    padding: 0 #{sm(16)};
+    margin: #{sm(40)} 0 0 auto;
+  }
+
+  .keyImg_ClosedBetaComponent {
+    height: #{sm(450)};
+    width: 100%;
+  }
+
+  .aside_ClosedBetaComponent {
+    width: 100%;
+  }
+
+  .asideKey_ClosedBetaComponent {
+    gap: #{sm(16)};
+    margin-bottom: #{sm(16)};
+    img {
+      width: #{sm(32)};
+      height: #{sm(32.7)};
+    }
+
+    font-size: #{sm(16)};
+  }
+
+  .asideTwitch_ClosedBetaComponent {
+    padding: #{sm(10)} #{sm(20)};
+    img {
+      width: #{sm(42.7)};
+      height: #{sm(34)};
+    }
+    font-size: #{sm(16)};
+  }
+
+  .noKey_ClosedBetaComponent {
+    padding: #{sm(10)} 0;
+    margin: #{sm(15)} 0;
+    font-size: #{sm(16)};
+  }
+
+  .info_ClosedBetaComponent {
+    font-size: #{sm(15)};
+    line-height: #{sm(24.84)};
+  }
+
+  .infoSmall_ClosedBetaComponent {
+    font-size: #{sm(13)};
+    line-height: #{sm(24)};
+  }
+
+  .or1_ClosedBetaComponent {
+    gap: #{sm(10)};
+    border-radius: #{sm(7)};
+    padding: #{sm(15)} #{sm(20)};
+    margin-top: #{sm(10)};
+    img {
+      cursor: pointer;
+      height: #{sm(35)};
+    }
+
+    font-size: #{sm(16)};
+  }
+
+  .or2_ClosedBetaComponent {
+    padding: #{sm(10)} #{sm(20)};
+    margin-top: #{sm(10)};
+    img {
+      width: #{sm(111)};
+      height: #{sm(50)};
+    }
+
+    font-size: #{sm(16)};
+  }
+
+  .or3_ClosedBetaComponent {
+    padding: #{sm(10)} #{sm(20)};
+    margin-top: #{sm(10)};
+    img {
+      width: #{sm(49)};
+      height: #{sm(59)};
+    }
+
+    font-size: #{sm(16)};
+  }
+
+  .or_ClosedBetaComponent {
+    margin: #{sm(10)} 0;
+
+    img {
+      width: #{sm(270)};
+      height: #{sm(18)};
+    }
+
+    button {
+      padding: #{sm(6)} #{sm(10)};
+      font-size: #{sm(12)};
+    }
+  }
+
+  .ors_ClosedBetaComponent {
+    gap: #{sm(30)};
+    padding-right: #{sm(34)};
+    margin-top: #{sm(20)};
+    font-size: #{sm(14)};
+  }
+
+  // OurActivityComponent
+  .carousels_OurActivityComponent {
+    width: fit-content;
+    overflow: scroll;
+    align-items: start !important;
+    @include flexCenter();
+    gap: 3.646vw;
+    padding: 5.208vw 15%;
+    z-index: 5;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .carousel_OurActivityComponent {
+    width: #{sm(300)};
+  }
+
+  .carousel_OurActivityComponent {
+    position: relative;
+  }
+  .carouselImg_OurActivityComponent {
+    @include BgImgContain();
+    background-size: cover !important;
+    width: #{sm(300)};
+    height: #{sm(200)};
+    padding: 0;
+  }
+
+  .carouselHeader_OurActivityComponent {
+    font-size: #{sm(12)};
+    padding: #{sm(5)};
+    backdrop-filter: blur(#{sm(5)});
+  }
+
+  .play_OurActivityComponent {
+    top: #{sm(100)};
+    left: #{sm(120)};
+    z-index: 1;
+    cursor: pointer;
+    height: #{sm(20)};
+    width: #{sm(60)};
+  }
+
+  .carouselHeaderImg_OurActivityComponent {
+    width: #{sm(30)};
+    height: #{sm(30)};
+    margin-right: #{sm(10)};
+  }
+
+  .share_OurActivityComponent {
+    cursor: pointer;
+    img {
+      margin: 0 auto;
+      width: #{sm(20)};
+      height: #{sm(16)};
+    }
+  }
+
+  .carouselTitle_OurActivityComponent {
+    font-size: #{sm(16)};
+    margin-top: #{sm(5)};
+    margin-bottom: 0px;
+  }
+
+  .text_OurActivityComponent {
+    font-size: #{sm(14)};
+    max-width: #{sm(260)};
+  }
+
+  // ChooseYourWarriorComponent
+  .section_ChooseYourWarriorComponent {
+    @include flexCenterBetween();
+    gap: #{clamps(0)};
+    padding: 0 #{sm(16)};
+    width: 100%;
+  }
+
+  .main_ChooseYourWarriorComponent {
+    gap: #{clamps(0)};
+    justify-content: center;
+  }
+
+  .carouselImg_ChooseYourWarriorComponent {
+    width: #{sm(188)};
+    max-height: #{sm(276)};
+  }
+
+  .carouselTitle_ChooseYourWarriorComponent {
+    font-size: #{sm(32)};
+  }
+
+  // NextPhaseComponent
+  .NextPhaseComponent {
+    padding-top: #{sm(200)};
+    padding-bottom: #{sm(210)};
+    padding-left: #{sm(16)};
+  }
+
+  .text_NextPhaseComponent {
+    font-size: #{sm(36)};
+    line-height: #{sm(50)};
+    width: 100%;
+  }
+
+  .desc_NextPhaseComponent {
+    font-size: #{sm(18)};
+    line-height: #{sm(28.8)};
+    width: 100%;
+    margin-bottom: #{sm(50)};
+  }
+}
+
+@media (min-width: 750px) and (max-width: 1200px) {
+  // WhatIsKatanaComponent
+  .WhatIsKatanaComponent {
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: #{clamps(80)};
+    padding-top: #{clamps(100)};
+  }
+
+  .logos {
+    @include flexCenter();
+    justify-content: center;
+    gap: #{clamps(50)};
+    margin: 0 auto;
+
+    img {
+      width: #{clamps(234)};
+      height: #{clamps(92)};
+      object-fit: contain;
+    }
+  }
+
+  .title_WhatIsKatanaComponent {
+    font-size: #{md(42)};
+    @include text500();
+    color: $yellow;
+  }
+
+  .box_WhatIsKatanaComponent {
+    @include flexCenter();
+    gap: #{md(80)};
+    padding-bottom: #{md(140)};
+    margin: 0 auto;
+  }
+
+  .img_WhatIsKatanaComponent {
+    width: #{md(500)};
+    height: #{md(713)};
+  }
+
+  .answers_WhatIsKatanaComponent {
+    display: flex;
+    flex-direction: column;
+    gap: #{clamps(15)};
+    margin: #{clamps(40)} auto #{clamps(50)} auto;
+  }
+
+  .answer_WhatIsKatanaComponent {
+    display: flex;
+    gap: #{clamps(16)};
+    align-items: start;
+    width: 100%;
+    max-width: #{md(702.2)};
+
+    img {
+      width: #{md(24)};
+      height: #{md(24)};
+      object-fit: contain;
+    }
+
+    font-size: #{md(22)};
+    @include text400();
+    color: $white;
+    line-height: #{md(42)};
+  }
+
+  // AboutTheGameComponent
+  .AboutTheGameComponent {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-top: #{clamps(130)};
+    padding-bottom: #{clamps(663)};
+  }
+
+  .title_AboutTheGameComponent {
+    font-size: #{clamps(64)};
+    @include text700();
+    font-family: $Jost !important;
+    color: $white;
+    text-align: center;
+  }
+
+  .text_AboutTheGameComponent {
+    font-size: #{md(25)};
+    @include text400();
+    font-family: $Jost !important;
+    color: $white;
+    opacity: 0.7;
+    text-align: center;
+    width: #{md(983)};
+    margin: 0 auto;
+  }
+
+  .cards_AboutTheGameComponent {
+    display: flex;
+    margin: #{clamps(61)} auto #{clamps(75)} auto;
+    width: fit-content;
+    gap: #{md(32)};
+  }
+
+  .card_AboutTheGameComponent {
+    height: #{md(550)};
+    width: #{md(413)};
+    background: #111115;
+    border: #{clamps(1)} solid rgba(255, 255, 255, 0.2);
+    border-radius: #{clamps(15)};
+    backdrop-filter: blur(#{clamps(30)});
+    overflow: hidden;
+  }
+
+  .cardImg_AboutTheGameComponent {
+    height: #{md(259)};
+    width: #{md(435)};
+    position: relative;
+    top: #{md(-10)};
+    left: #{md(-5)};
+    object-fit: cover;
+  }
+
+  .top {
+    top: #{clamps(-20)} !important;
+  }
+
+  .cardSubtitle_AboutTheGameComponent {
+    font-size: #{clamps(14)};
+    font-family: $Jost;
+    font-weight: 500;
+    color: $yellow;
+    line-height: #{clamps(19.2)};
+    letter-spacing: #{clamps(7)};
+    text-transform: uppercase;
+    text-align: center;
+    // margin-top: #{clamps(30)};
+  }
+
+  .cardTitle_AboutTheGameComponent {
+    font-size: #{md(28)};
+    font-family: $Jost;
+    font-weight: 700;
+    color: $white;
+    line-height: #{clamps(28.2)};
+    text-transform: uppercase;
+    text-align: center;
+    margin: #{md(12)} 0;
+  }
+
+  .cardDesc_AboutTheGameComponent {
+    font-size: #{md(22)};
+    font-family: $Jost;
+    font-weight: 400;
+    color: $white;
+    line-height: #{clamps(25.6)};
+    text-align: center;
+    margin: 0 auto #{md(20)} auto;
+    width: 90%;
+  }
+
+  .mints_AboutTheGameComponent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: #{md(150)};
+    justify-content: center;
+    margin: #{clamps(193)} auto #{clamps(125)} auto;
+  }
+
+  .mint_AboutTheGameComponent {
+    position: relative;
+    width: #{md(1000)};
+    height: fit-content;
+    padding: 0 0 #{md(46)} #{md(30)};
+    background: #111115;
+    border-radius: #{clamps(15)};
+  }
+
+  .mintLogo_AboutTheGameComponent {
+    width: #{md(60)};
+    height: #{md(57)};
+    margin-right: #{md(20)};
+  }
+
+  .mintText_AboutTheGameComponent {
+    font-size: #{md(20)};
+    font-family: $Jost;
+    font-weight: 500;
+    color: $yellow;
+    text-transform: uppercase;
+  }
+
+  .mintTitle__AboutTheGameComponent {
+    font-size: #{md(32)};
+    font-family: $inter;
+    font-weight: 500;
+    color: $yellow;
+    text-transform: uppercase;
+    margin-top: #{md(42)};
+  }
+
+  .mintDesc__AboutTheGameComponent {
+    font-size: #{md(24)};
+    font-family: $poppins;
+    font-weight: 400;
+    line-height: #{md(30)};
+    color: #787878;
+    width: #{md(500)};
+    display: flex;
+    flex-direction: column;
+    gap: #{md(20)};
+    margin: #{md(10)} 0;
+  }
+
+  .mintsmall_AboutTheGameComponent {
+    font-size: #{clamps(8)};
+    font-family: $poppins;
+    font-weight: 600;
+    color: $yellow;
+  }
+
+  .mintImg__AboutTheGameComponent {
+    position: absolute;
+    top: #{md(-63)};
+    left: #{md(497)};
+    width: #{md(576)};
+    height: #{md(491)};
+  }
+
+  // TrailerGalleryComponent
+  .TrailerGalleryComponent {
+    position: relative;
+
+    background: $black;
+    z-index: 1;
+  }
+
+  .control_TrailerGalleryComponent {
+    @include flexCenterBetween();
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    z-index: 18;
+    padding: 0 #{clamps(80)};
+
+    img {
+      cursor: pointer;
+      height: #{clamps(57)};
+      width: #{clamps(30)};
+    }
+  }
+
+  .carousels_TrailerGalleryComponent {
+    width: fit-content;
+    overflow: scroll;
+    @include flexCenter();
+    gap: 6.771vw;
+    padding: 5.208vw 15%;
+    z-index: 5;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .carousel_TrailerGalleryComponent {
+    position: relative;
+  }
+  .carouselImg_TrailerGalleryComponent {
+    width: 43.333vw;
+    height: 23.893vw;
+    object-fit: cover;
+    border: 0.051vw solid $yellow;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .play_TrailerGalleryComponent {
+    position: absolute;
+    top: 13vw;
+    left: 23.906vw;
+    z-index: 1;
+    cursor: pointer;
+    height: 5.313vw;
+    width: 5.313vw;
+  }
+
+  .title_TrailerGalleryComponent {
+    font-size: #{clamps(30)};
+    @include text600();
+    font-family: $Jost !important;
+    color: $white;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: #{clamps(20)};
+  }
+
+  .bg_TrailerGalleryComponent {
+    position: absolute;
+    bottom: 17.708vw;
+    z-index: -1;
+    left: 23.906vw;
+    height: 55.938vw;
+    width: 61.2vw;
+  }
+
+  // ClosedBetaComponent
+  .ClosedBetaComponent {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-top: #{clamps(154)};
+    padding-bottom: #{clamps(175.8)};
+  }
+
+  .subtitle_ClosedBetaComponent {
+    font-size: #{clamps(64)};
+    @include text500();
+    font-family: $Jost !important;
+    color: $yellow;
+    text-transform: uppercase;
+    text-align: center;
+    font-style: italic;
+    line-height: #{clamps(40)};
+  }
+
+  .title_ClosedBetaComponent {
+    font-size: #{clamps(64)};
+    @include text700();
+    font-family: $Jost !important;
+    color: $white;
+    text-transform: uppercase;
+    margin-bottom: #{clamps(30)};
+    text-align: center;
+  }
+
+  .text_ClosedBetaComponent {
+    font-size: #{clamps(35)};
+    @include text500();
+    font-family: $Jost !important;
+    color: $white;
+    text-align: center;
+  }
+
+  .downloads_ClosedBetaComponent {
+    @include flexCenter();
+    gap: #{clamps(16)};
+    width: fit-content;
+    margin: #{clamps(20)} auto;
+    img {
+      cursor: pointer;
+      width: #{clamps(246)};
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  .durationBox_ClosedBetaComponent {
+    width: #{clamps(620)};
+    margin: 0 auto;
+  }
+
+  .duration_ClosedBetaComponent {
+    @include flexCenter();
+    justify-content: center;
+    gap: #{clamps(30)};
+    padding: #{clamps(16)} auto;
+  }
+
+  .durationTitle_ClosedBetaComponent {
+    font-size: #{clamps(16)};
+    @include text500();
+    font-family: $Jost !important;
+    color: $white;
+    line-height: #{clamps(19.2)};
+  }
+
+  .durationText_ClosedBetaComponent {
+    font-size: #{clamps(20)};
+    @include text400();
+    font-family: $Jost !important;
+    color: $white;
+    line-height: #{clamps(35)};
+    opacity: 0.83;
+  }
+
+  .durationBtns__ClosedBetaComponent {
+    @include flexCenter();
+    gap: #{clamps(5)};
+  }
+
+  .durationBtn__ClosedBetaComponent {
+    cursor: pointer;
+    padding: #{clamps(8)} #{clamps(15.75)};
+    border: #{clamps(1)} solid $yellow;
+    border-radius: #{clamps(18)};
+    text-transform: uppercase;
+
+    font-size: #{clamps(24)};
+    @include text600();
+    color: $yellow;
+    font-style: italic;
+  }
+
+  .key_ClosedBetaComponent {
+    @include flexCenter();
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    gap: #{md(100)};
+    width: fit-content;
+    margin: #{md(100)} 0 0 auto;
+  }
+
+  .keyImg_ClosedBetaComponent {
+    height: #{md(815.01)};
+    width: #{md(1100)};
+    margin: 0 auto;
+    // background-color: #808aff;
+  }
+
+  .aside_ClosedBetaComponent {
+    width: #{md(1000)};
+  }
+
+  .asideKey_ClosedBetaComponent {
+    @include flexCenterBetween();
+    gap: #{clamps(30)};
+    margin-bottom: #{md(32)};
+    img {
+      width: #{md(64.5)};
+      height: #{md(67.7)};
+      object-fit: contain;
+    }
+
+    font-size: #{md(32)};
+    @include text600();
+    color: $white;
+    font-style: italic;
+  }
+
+  .asideTwitch_ClosedBetaComponent {
+    @include flexCenterBetween();
+    gap: #{clamps(10)};
+    background-color: #808aff;
+    border-radius: #{md(10)};
+    padding: #{md(20)} #{md(30)};
+    img {
+      width: #{md(52.7)};
+      height: #{md(44)};
+    }
+
+    font-size: #{md(30)};
+    @include text600();
+    font-family: $Jost !important;
+    color: $white;
+    font-style: italic;
+  }
+
+  .noKey_ClosedBetaComponent {
+    @include flexCenter();
+    justify-content: center;
+    background-color: #191d23;
+    border-radius: #{md(10)};
+    padding: #{md(20)} 0;
+    margin: #{md(30)} 0;
+
+    font-size: #{md(28)};
+    @include text600();
+    color: $white;
+    font-family: $Jost !important;
+    font-style: italic;
+  }
+
+  .info_ClosedBetaComponent {
+    font-size: #{md(26)};
+    @include text400();
+    font-family: $Jost !important;
+    color: $white;
+    opacity: 0.75;
+    text-transform: capitalize;
+    line-height: #{md(35.84)};
+  }
+
+  .infoSmall_ClosedBetaComponent {
+    font-size: #{md(20)};
+    @include text400();
+    color: $yellow;
+  }
+
+  .or1_ClosedBetaComponent {
+    @include flexCenterBetween();
+    gap: #{clamps(10)};
+    background-color: #191d23;
+    border-radius: #{md(10)};
+    padding: #{md(20)} #{md(30)};
+    margin-top: #{md(20)};
+    img {
+      cursor: pointer;
+      width: #{md(50)};
+      height: #{md(45)};
+    }
+
+    font-size: #{md(30)};
+    @include text600();
+    font-family: $Jost !important;
+    color: $white;
+    font-style: italic;
+  }
+
+  .or2_ClosedBetaComponent {
+    @include flexCenterBetween();
+    gap: #{clamps(70)};
+    background-color: #191d23;
+    border-radius: #{md(10)};
+    padding: #{md(20)} #{md(30)};
+    margin-top: #{md(20)};
+    img {
+      cursor: pointer;
+      object-fit: contain;
+      width: #{md(201)};
+      height: #{md(90)};
+    }
+
+    font-size: #{md(30)};
+    @include text600();
+    font-family: $Jost !important;
+    color: $white;
+    font-style: italic;
+  }
+
+  .or3_ClosedBetaComponent {
+    @include flexCenterBetween();
+    gap: #{md(1)};
+    background-color: #191d23;
+    border-radius: #{md(10)};
+    padding: #{md(20)} #{md(30)};
+    margin-top: #{md(20)};
+    img {
+      cursor: pointer;
+      object-fit: contain;
+      width: #{md(60)};
+      height: #{md(69)};
+    }
+
+    font-size: #{md(30)};
+    @include text600();
+    font-family: $Jost !important;
+    color: $white;
+    font-style: italic;
+    line-height: #{md(36)};
+  }
+
+  .or_ClosedBetaComponent {
+    @include flexCenterBetween();
+    margin: #{md(20)} 0;
+
+    img {
+      width: #{md(320)};
+      height: #{md(36)};
+    }
+
+    button {
+      cursor: pointer;
+      padding: #{md(12)} #{md(20)};
+      border: none;
+      border-radius: #{md(32)};
+      background: #191d23;
+
+      text-transform: uppercase;
+      font-size: #{md(20)};
+      @include text500();
+      color: $yellow;
+      font-family: $Jost !important;
+      text-transform: capitalize;
+    }
+  }
+
+  .ors_ClosedBetaComponent {
+    @include flexCenter();
+    gap: #{md(40)};
+    flex-wrap: wrap;
+    padding-right: #{md(34)};
+
+    text-transform: uppercase;
+    font-size: #{md(28)};
+    @include text400();
+    color: $white;
+    font-family: $Jost !important;
+    text-transform: capitalize;
+  }
+
+  // OurActivityComponent
+  .OurActivityComponent {
+    position: relative;
+    background: $black;
+    width: 100%;
+    padding-bottom: #{clamps(175.8)};
+  }
+
+  .subtitle_OurActivityComponent {
+    background: linear-gradient(0deg, #ffeac4 0%, #ffb42f 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: #{clamps(30)};
+    @include text700();
+    font-family: $Jost !important;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: #{clamps(40)};
+    letter-spacing: #{clamps(2)};
+    margin-top: #{clamps(62)};
+  }
+
+  .subtext_OurActivityComponent {
+    background: linear-gradient(0deg, #ffeac4 0%, #ffb42f 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: #{clamps(20)};
+    @include text800();
+    font-family: $Jost !important;
+    text-transform: uppercase;
+    text-align: center;
+    font-style: italic;
+    line-height: #{clamps(24)};
+    letter-spacing: #{clamps(2)};
+    margin-top: #{clamps(62)};
+    margin-bottom: #{clamps(20)};
+  }
+
+  .title_OurActivityComponent {
+    font-size: #{clamps(38)};
+    @include text700();
+    font-family: $Jost !important;
+    color: $white;
+    text-transform: uppercase;
+    margin-bottom: #{clamps(122)};
+    text-align: center;
+    font-style: italic;
+  }
+
+  .carousels_OurActivityComponent {
+    width: fit-content;
+    overflow: scroll;
+    align-items: start !important;
+    @include flexCenter();
+    gap: 3.646vw;
+    padding: 5.208vw 15%;
+    z-index: 5;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .carousel_OurActivityComponent {
+    position: relative;
+  }
+  .carouselImg_OurActivityComponent {
+    @include BgImgContain();
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+    padding: 1.625vw;
+  }
+
+  .carouselHeader_OurActivityComponent {
+    @include flexCenter();
+    font-size: #{clamps(18)};
+    text-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.5);
+    @include text400();
+    font-family: $roboto !important;
+    color: #eee;
+    font-style: normal;
+  }
+
+  .play_OurActivityComponent {
+    position: absolute;
+    top: 13vw;
+    left: 23.906vw;
+    z-index: 1;
+    cursor: pointer;
+    height: 5.313vw;
+    width: 5.313vw;
+  }
+
+  .carouselHeaderImg_OurActivityComponent {
+    width: 2.083vw;
+    height: 2.083vw;
+    border-radius: 100%;
+    margin-right: #{clamps(10)};
+  }
+
+  .share_OurActivityComponent {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+
+    img {
+      margin: 0 auto;
+      width: #{clamps(20)};
+      height: #{clamps(16)};
+    }
+  }
+
+  .carouselTitle_OurActivityComponent {
+    font-size: calc(42 * 100vw / 1440);
+    @include text700();
+    font-family: $Jost !important;
+    color: $white;
+    text-transform: lowercase;
+    text-align: center;
+    font-style: normal;
+    margin-top: #{clamps(30)};
+    margin-bottom: 0px;
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+  .carouselTitle_OurActivityComponent.inactive {
+    font-size: calc(37.8 * 100vw / 1920) !important;
+  }
+
+  .text_OurActivityComponent {
+    font-size: calc(28 * 100vw / 1440);
+    @include text400();
+    font-family: $Jost !important;
+    color: #787878;
+    text-align: center;
+    font-style: normal;
+    margin: 0px auto;
+    max-width: 40.365vw;
+  }
+
+  // ChooseYourWarriorComponent
+  .ChooseYourWarriorComponent {
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-top: #{clamps(148)};
+    padding-bottom: #{clamps(50)};
+  }
+
+  .section_ChooseYourWarriorComponent {
+    @include flexCenter();
+    gap: #{clamps(40)};
+    width: fit-content;
+    margin: #{clamps(40)} auto 0 auto;
+  }
+
+  .main_ChooseYourWarriorComponent {
+    @include flexCenter();
+    gap: #{clamps(17)};
+    width: 100%;
+  }
+
+  .carouselImg_ChooseYourWarriorComponent {
+    width: #{clamps(188)};
+    height: auto;
+    max-height: #{clamps(276)};
+  }
+
+  .carouselImg_ChooseYourWarriorComponent.active {
+    max-height: #{clamps(500)} !important;
+    height: #{clamps(760)} !important;
+    // max-height: fit-content;
+    width: #{clamps(349)} !important;
+  }
+
+  .control_ChooseYourWarriorComponent {
+    height: #{clamps(18)};
+    width: #{clamps(35)};
+    cursor: pointer;
+  }
+
+  .carouselTitle_ChooseYourWarriorComponent {
+    font-size: #{clamps(52)};
+    @include text700();
+    color: $white;
+    text-align: center;
+    font-style: italic;
+  }
+
+  // NextPhaseComponent
+  .NextPhaseComponent {
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-top: #{clamps(288)};
+    padding-bottom: #{clamps(240)};
+    padding-left: #{clamps(110)};
+    @media (min-width: 1000px) {
+      padding-left: #{clamps(410)};
+    }
+  }
+
+  .text_NextPhaseComponent {
+    font-size: #{clamps(54)};
+    @include text700();
+    font-family: $Jost !important;
+    color: $white;
+    text-transform: uppercase;
+    line-height: #{clamps(70)};
+    width: #{clamps(716)};
+  }
+
+  .desc_NextPhaseComponent {
+    font-size: #{clamps(18)};
+    @include text400();
+    font-family: $Jost !important;
+    color: $white;
+    text-transform: uppercase;
+    line-height: #{clamps(28.8)};
+    width: #{clamps(592)};
+    opacity: 0.7;
+    margin-bottom: #{clamps(50)};
+  }
 }

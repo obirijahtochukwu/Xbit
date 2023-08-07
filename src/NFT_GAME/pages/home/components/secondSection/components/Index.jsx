@@ -122,9 +122,7 @@ export const EcosystemFeaturesComponent = () => {
         What makes us unique
       </div>
 
-      <header
-        className={`${firstSectionStyle.btns_Header} ${styles.btns_Header}`}
-      >
+      <header className={`${firstSectionStyle.btns_Header}`}>
         {buttons.map(({ text }, index) => {
           return (
             <div
@@ -141,7 +139,7 @@ export const EcosystemFeaturesComponent = () => {
         })}
       </header>
 
-      <main className={styles.main_EcosystemFeaturesComponent}>
+      <main className={`${styles.main_EcosystemFeaturesComponent}`}>
         <img
           src="/NFT_GAME/media/Group 1000001361.svg"
           alt=""
@@ -276,11 +274,13 @@ export const UltimateJourneyComponent = () => {
                 {steps.map(({ text, img }) => {
                   return (
                     <div className={styles.step_UltimateJourneyComponent}>
-                      <img
-                        src={img ? "/NFT_GAME/media/pseudo (6).svg" : ""}
-                        alt=""
-                        style={{ backgroundColor: !img ? "" : "transparent" }}
-                      />
+                      <div>
+                        <img
+                          src={img ? "/NFT_GAME/media/pseudo (6).svg" : ""}
+                          alt=""
+                          style={{ backgroundColor: !img ? "" : "transparent" }}
+                        />
+                      </div>
                       <div className="">{text}</div>
                     </div>
                   );
@@ -352,7 +352,9 @@ export const DifferentRarityComponent = () => {
           className={styles.control_DifferentRarityComponent}
         />
 
-        <main className={styles.main_DifferentRarityComponent}>
+        <main
+          className={`${styles.md} ${styles.main_DifferentRarityComponent}`}
+        >
           {active < 3 && (
             <div
               src={"img"}
@@ -439,6 +441,33 @@ export const DifferentRarityComponent = () => {
           )}
         </main>
 
+        <main
+          className={`${styles.sm} ${styles.main_DifferentRarityComponent}`}
+        >
+          {/* ACTIVE CAROUSEL */}
+          {carousels.map(({ img, id, text }) => {
+            if (active === Number(id)) {
+              return (
+                <div
+                  className={`active ${styles.carousel_DifferentRarityComponent}`}
+                >
+                  <img
+                    src={img}
+                    alt=""
+                    className={`${styles.carouselImg_DifferentRarityComponent} ${styles.active}`}
+                  />
+
+                  <div
+                    className={styles.carouselTitle_DifferentRarityComponent}
+                  >
+                    {text}
+                  </div>
+                </div>
+              );
+            }
+          })}
+        </main>
+
         <img
           onClick={() =>
             active < carousels.length ? setActive(active + 1) : null
@@ -509,7 +538,9 @@ export const DifferentRarityTwoComponent = () => {
         IN-GAME ITEMS
       </div>
 
-      <section className={firstSectionStyle.section_ChooseYourWarriorComponent}>
+      <section
+        className={`${styles.md} ${firstSectionStyle.section_ChooseYourWarriorComponent}`}
+      >
         <img
           onClick={() => (active > 1 ? setActive(active - 1) : null)}
           style={{
@@ -618,13 +649,66 @@ export const DifferentRarityTwoComponent = () => {
           className={firstSectionStyle.control_ChooseYourWarriorComponent}
         />
       </section>
+      <section
+        className={`${styles.sm} ${firstSectionStyle.section_ChooseYourWarriorComponent}`}
+      >
+        <img
+          onClick={() => (active > 1 ? setActive(active - 1) : null)}
+          style={{
+            // transform: "scale(4)",
+            visibility: active > 1 ? "" : "hidden",
+            transform: "rotate(-0deg) scale(2)",
+          }}
+          src="/NFT_GAME/media/Vector 1.svg"
+          alt=""
+          className={firstSectionStyle.control_ChooseYourWarriorComponent}
+        />
+
+        <main className={firstSectionStyle.main_ChooseYourWarriorComponent}>
+          {/* ACTIVE CAROUSEL */}
+          {carousels.map(({ img, id, text }) => {
+            if (active === Number(id)) {
+              return (
+                <div
+                  className={`active ${firstSectionStyle.carousel_ChooseYourWarriorComponent}`}
+                >
+                  <img
+                    src={img}
+                    alt=""
+                    className={`${firstSectionStyle.carouselImg_ChooseYourWarriorComponent} ${firstSectionStyle.active}`}
+                  />
+
+                  <div
+                    className={
+                      firstSectionStyle.carouselTitle_ChooseYourWarriorComponent
+                    }
+                  >
+                    {text}
+                  </div>
+                </div>
+              );
+            }
+          })}
+        </main>
+
+        <img
+          onClick={() =>
+            active < carousels.length ? setActive(active + 1) : null
+          }
+          src="/NFT_GAME/media/Vector 1.svg"
+          alt=""
+          style={{
+            visibility: active < carousels.length ? "" : "hidden",
+            transform: "rotate(180deg) scale(2)",
+          }}
+          className={firstSectionStyle.control_ChooseYourWarriorComponent}
+        />
+      </section>
       <div className={firstSectionStyle.subtext_OurActivityComponent}>
         DADAO IMMORTAL
       </div>
 
-      <header
-        className={`${firstSectionStyle.btns_Header} ${styles.btns_Header}`}
-      >
+      <header className={`${firstSectionStyle.btns_Header} flex-wrap `}>
         {buttons.map(({ text }) => {
           return <div className={firstSectionStyle.btn_Header}>{text}</div>;
         })}
@@ -725,7 +809,7 @@ export const PartnersComponent = () => {
   ];
 
   return (
-    <article>
+    <article className={styles.PartnersComponent}>
       <div
         style={{ marginBottom: "0px" }}
         className={firstSectionStyle.title_OurActivityComponent}
@@ -733,9 +817,14 @@ export const PartnersComponent = () => {
         PARTNERS & BACKERS
       </div>
       <main className={styles.partners_PartnersComponent}>
-        {partners.map(({ logos }) => {
+        {partners.map(({ logos }, index) => {
           return (
-            <div className={styles.partner_PartnersComponent}>
+            <div
+              className={`${
+                (index === partners.length - 1 && styles.hidMd) ||
+                (index > 1 && styles.hidSm)
+              } ${styles.partner_PartnersComponent}`}
+            >
               {logos.map((item) => {
                 return <img src={item} alt="" />;
               })}

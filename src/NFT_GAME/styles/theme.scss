@@ -78,6 +78,14 @@ body {
   @return calc(#{$value}px * (var(--vw) / 390));
 }
 
+@function sm($value) {
+  @return calc(#{$value} * (clamp(1px, var(--vw), 400px) / 390));
+}
+
+@function md($value) {
+  @return calc(#{$value} * (var(--vw) / 1440));
+}
+
 // PIXEL PERFECT CALCULATOR
 @function clamps(
   $value,

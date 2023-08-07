@@ -23,3 +23,30 @@
   @include flexCenter();
   gap: #{clamps(45)};
 }
+
+@media (max-width: 750px) {
+  .md {
+    display: none !important;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 1200px) {
+  .header {
+    width: #{md(1300)};
+    backdrop-filter: blur(#{md(5)});
+    max-width: #{md(1300)};
+    font-size: #{md(22)};
+
+    img {
+      width: #{md(98.712)};
+      height: #{md(100.228)};
+    }
+  }
+
+  .main {
+    gap: #{md(70)};
+  }
+  .hid {
+    display: none;
+  }
+}

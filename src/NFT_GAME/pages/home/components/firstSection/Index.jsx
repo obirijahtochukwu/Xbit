@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./index.module.scss";
 import Navbar from "../layout/header/Index";
+import ReactElasticCarousel from "react-elastic-carousel";
 
 export const HeaderComponent = () => {
   const buttons = [
@@ -115,7 +116,10 @@ export const WhatIsKatanaComponent = () => {
             })}
           </div>
 
-          <main className={styles.btns_Header}>
+          <main
+            style={{ flexWrap: "wrap", width: "100%", justifyContent: "start" }}
+            className={styles.btns_Header}
+          >
             {buttons.map(({ text }) => {
               return (
                 <div className={styles.btn_Header}>
@@ -133,6 +137,8 @@ export const WhatIsKatanaComponent = () => {
 };
 
 export const AboutTheGameComponent = () => {
+  const ref = React.useRef(null);
+
   const cards = [
     {
       img: "/NFT_GAME/media/Group 49566.svg",
@@ -238,7 +244,10 @@ export const AboutTheGameComponent = () => {
               </div>
               <div className={styles.mintDesc__AboutTheGameComponent}>
                 <div className="">{desc}</div>
-                <div style={{ gap: "0px" }} className={styles.btn_Header}>
+                <div
+                  style={{ gap: "0px", width: "fit-content" }}
+                  className={styles.btn_Header}
+                >
                   <div>
                     {"mint weapons "}{" "}
                     <span className={styles.mintsmall_AboutTheGameComponent}>
@@ -305,6 +314,23 @@ export const TrailerGalleryComponent = () => {
   ];
 
   const ref = useRef();
+  const carouselRef = useRef();
+
+  const next = (currentItem, nextItem) => {
+    if (currentItem.index === nextItem.index) {
+      carouselRef.current.goTo(0);
+    }
+  };
+  const prev = (currentItem, nextItem) => {
+    if (currentItem.index === nextItem.index) {
+      carouselRef.current.goTo(carousels.length);
+    }
+  };
+  const breakPoints = [
+    { width: 1, itemsToShow: 1 },
+    { width: 550, itemsToShow: 4 },
+    { width: 768, itemsToShow: 5 },
+  ];
 
   useEffect(() => {
     const items = carousels.find((item) => item.id === String(active));
@@ -322,7 +348,12 @@ export const TrailerGalleryComponent = () => {
     <article className={styles.TrailerGalleryComponent}>
       <div className={styles.control_TrailerGalleryComponent}>
         <img
-          onClick={() => (active > 1 ? setActive(active - 1) : null)}
+          onClick={() => {
+            if (active > 1) {
+              setActive(active - 1);
+            }
+            carouselRef.current.slidePrev();
+          }}
           style={{
             transform: "rotate(180deg)",
             visibility: active > 1 ? "" : "hidden",
@@ -331,14 +362,59 @@ export const TrailerGalleryComponent = () => {
           alt=""
         />
         <img
-          onClick={() => (active < 3 ? setActive(active + 1) : null)}
+          onClick={() => {
+            if (active < 3) {
+              setActive(active + 1);
+            }
+            carouselRef.current.slideNext();
+          }}
           src="/NFT_GAME/media/Vector (19).svg"
           alt=""
           style={{ visibility: active < 3 ? "" : "hidden" }}
         />
       </div>
 
-      <article className="w-100 overflow-hidden">
+      <article className={`${styles.sm} w-75 mx-auto`}>
+        <ReactElasticCarousel
+          ref={carouselRef}
+          disableArrowsOnEnd={false}
+          onNextStart={next}
+          onPrevEnd={prev}
+          showArrows={false}
+          pagination={false}
+          renderPagination={false}
+          breakPoints={breakPoints}
+        >
+          {carousels.map(({ img, id }) => {
+            return (
+              <div className={styles.carousel_TrailerGalleryComponent}>
+                <img
+                  src={img}
+                  alt=""
+                  className={styles.carouselImg_TrailerGalleryComponent}
+                />
+                {active === Number(id) ? (
+                  <img
+                    src="/NFT_GAME/media/Group 1000001302.svg"
+                    alt=""
+                    className={styles.play_TrailerGalleryComponent}
+                  />
+                ) : (
+                  ""
+                )}
+                {active === Number(id) ? (
+                  <div className={styles.title_TrailerGalleryComponent}>
+                    Gameplay trailer
+                  </div>
+                ) : (
+                  ""
+                )}
+              </div>
+            );
+          })}
+        </ReactElasticCarousel>
+      </article>
+      <article className={`${styles.md} w-100 overflow-hidden`}>
         <main ref={ref} className={styles.carousels_TrailerGalleryComponent}>
           {carousels.map(({ img, id }) => {
             return (
@@ -558,6 +634,24 @@ export const OurActivityComponent = () => {
     },
   ];
 
+  const carouselRef = useRef();
+
+  const next = (currentItem, nextItem) => {
+    if (currentItem.index === nextItem.index) {
+      carouselRef.current.goTo(0);
+    }
+  };
+  const prev = (currentItem, nextItem) => {
+    if (currentItem.index === nextItem.index) {
+      carouselRef.current.goTo(carousels.length);
+    }
+  };
+  const breakPoints = [
+    { width: 1, itemsToShow: 1 },
+    { width: 550, itemsToShow: 4 },
+    { width: 768, itemsToShow: 5 },
+  ];
+
   return (
     <div className={styles.OurActivityComponent}>
       <header>
@@ -575,7 +669,7 @@ export const OurActivityComponent = () => {
         </div>
       </header>
 
-      <div className={styles.control_TrailerGalleryComponent}>
+      <div className={`${styles.md} ${styles.control_TrailerGalleryComponent}`}>
         <img
           onClick={() => (active > 1 ? setActive(active - 1) : null)}
           style={{
@@ -595,7 +689,7 @@ export const OurActivityComponent = () => {
         />
       </div>
 
-      <article className="w-100 overflow-hidden">
+      <article className={`${styles.md} w-100 overflow-hidden`}>
         <main
           style={{
             transform: active === 1 ? "translate(15%)" : "translate(-20%)",
@@ -721,6 +815,62 @@ export const OurActivityComponent = () => {
           })}
         </main>
       </article>
+
+      <div style={{ width: "90%" }} className={`${styles.sm} mx-auto`}>
+        <ReactElasticCarousel
+          ref={carouselRef}
+          disableArrowsOnEnd={false}
+          onNextStart={next}
+          onPrevEnd={prev}
+          // showArrows={false}
+          pagination={false}
+          renderPagination={false}
+          breakPoints={breakPoints}
+        >
+          {carousels.map(({ img, id, text, desc }) => {
+            return (
+              <div className={`active ${styles.carousel_OurActivityComponent}`}>
+                <div
+                  style={{
+                    backgroundImage: `url('${img}')`,
+                  }}
+                  className={styles.carouselImg_OurActivityComponent}
+                >
+                  <div className={styles.carouselHeader_OurActivityComponent}>
+                    <img
+                      src="/NFT_GAME/media/Link - Photo image of Katana Inu.svg"
+                      alt=""
+                      className={styles.carouselHeaderImg_OurActivityComponent}
+                    />
+                    <div
+                      className={
+                        styles.carouselHeaderTitle_OurActivityComponent
+                      }
+                    >
+                      Katana Inu at Blockchain Economy in Istanbul 2022 | +
+                      Speech from Founder
+                    </div>
+                    <div className={styles.share_OurActivityComponent}>
+                      <img src="/NFT_GAME/media/ytp-id-8.svg" alt="" />
+                      <div className="">Share</div>
+                    </div>
+                  </div>
+                </div>
+                <img
+                  src="/NFT_GAME/media/Group 1000001324.svg"
+                  alt=""
+                  className={styles.play_OurActivityComponent}
+                />
+
+                <div className={styles.carouselTitle_OurActivityComponent}>
+                  {text}
+                </div>
+                <div className={styles.text_OurActivityComponent}>{desc}</div>
+              </div>
+            );
+          })}
+        </ReactElasticCarousel>
+      </div>
     </div>
   );
 };
@@ -744,6 +894,24 @@ export const ChooseYourWarriorComponent = () => {
       text: "Kape",
       img: "/NFT_GAME/media/Img - A 3D model of a car. Use mouse, touch or arrow keys to move. ⏵ image (2).svg",
     },
+  ];
+
+  const carouselRef = useRef();
+
+  const next = (currentItem, nextItem) => {
+    if (currentItem.index === nextItem.index) {
+      carouselRef.current.goTo(0);
+    }
+  };
+  const prev = (currentItem, nextItem) => {
+    if (currentItem.index === nextItem.index) {
+      carouselRef.current.goTo(carousels.length);
+    }
+  };
+  const breakPoints = [
+    { width: 1, itemsToShow: 1 },
+    { width: 550, itemsToShow: 4 },
+    { width: 768, itemsToShow: 5 },
   ];
 
   return (
@@ -778,7 +946,7 @@ export const ChooseYourWarriorComponent = () => {
             <div
               src={"img"}
               alt=""
-              className={styles.carouselImg_ChooseYourWarriorComponent}
+              className={`${styles.md} ${styles.carouselImg_ChooseYourWarriorComponent}`}
             />
           )}
           {/* PREVIOUS CAROUSEL */}
@@ -787,7 +955,7 @@ export const ChooseYourWarriorComponent = () => {
             if (val === active - 1) {
               return (
                 <div
-                  className={`active ${styles.carousel_ChooseYourWarriorComponent}`}
+                  className={`active ${styles.md} ${styles.carousel_ChooseYourWarriorComponent}`}
                 >
                   <img
                     src={img}
@@ -826,7 +994,7 @@ export const ChooseYourWarriorComponent = () => {
             if (val === active + 1) {
               return (
                 <div
-                  className={`active ${styles.carousel_ChooseYourWarriorComponent}`}
+                  className={`active ${styles.md} ${styles.carousel_ChooseYourWarriorComponent}`}
                 >
                   <img
                     src={img}
@@ -841,7 +1009,7 @@ export const ChooseYourWarriorComponent = () => {
             <div
               src={"img"}
               alt=""
-              className={styles.carouselImg_ChooseYourWarriorComponent}
+              className={`${styles.md} ${styles.carouselImg_ChooseYourWarriorComponent}`}
             />
           )}
         </main>
