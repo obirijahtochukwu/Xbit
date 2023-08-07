@@ -891,7 +891,7 @@
 
   .HeaderComponent {
     height: 100vh;
-    padding: #{sm(58)} 0 #{sm(90)} 0;
+    padding: #{sm(58)} 0 #{sm(150)} 0;
   }
 
   .imgTitle {
@@ -985,16 +985,18 @@
 
   .card_AboutTheGameComponent {
     height: #{sm(400)};
-    width: #{sm(300)};
+    width: 100%;
+    // width: #{sm(300)};
     border-radius: #{sm(15)};
     backdrop-filter: blur(#{sm(30)});
     margin: 0 auto;
     padding: 0 #{sm(16)} #{sm(16)} #{sm(16)};
+    overflow: hidden;
   }
 
   .cardImg_AboutTheGameComponent {
     height: #{sm(200)};
-    width: #{sm(310)};
+    width: 113.23%;
     top: #{sm(-10)};
     left: #{sm(-17)};
   }
