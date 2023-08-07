@@ -11,14 +11,23 @@ export const HeaderComponent = () => {
   ];
 
   return (
-    <div
-      style={{
-        backgroundImage:
-          "conic-gradient(from 180deg at 50.00% 50.00%, rgba(4, 5, 7, 0.15) 0deg, rgba(4, 5, 7, 0.15) 180deg), url('/NFT_GAME/media/Rectangle 496.svg')",
-      }}
-      className={styles.HeaderComponent}
-    >
+    <div className={styles.HeaderComponent}>
       <Navbar />
+      <video
+        allowFullScreen
+        autoPlay="true"
+        controls=""
+        muted
+        loop
+        width={"100%"}
+        height={"100%"}
+        className={styles.video}
+      >
+        <source
+          src="/NFT_GAME/media/WhatsApp Video 2023-08-06 at 1.11.44 AM.mp4"
+          type="video/mp4"
+        />
+      </video>
       <div
         style={{
           backgroundImage: "url('/NFT_GAME/media/title.svg')",
