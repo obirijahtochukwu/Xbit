@@ -494,8 +494,28 @@
 }
 
 .keyImg_ClosedBetaComponent {
+  position: relative;
   height: #{clamps(815.01)};
   width: #{clamps(984)};
+  @include BgImgContain();
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+
+  img {
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    left: #{clamps(125)};
+    height: #{clamps(630.01)};
+    width: #{clamps(562)};
+  }
+
+  video {
+    margin: auto 0 0 #{clamps(131)};
+    height: #{clamps(340.01)};
+    width: #{clamps(605)};
+  }
 }
 
 .aside_ClosedBetaComponent {
@@ -507,7 +527,7 @@
   gap: #{clamps(30)};
   margin-bottom: #{clamps(32)};
   // width: 100%;
-  img {
+  video {
     cursor: pointer;
     width: #{clamps(64.5)};
     height: #{clamps(67.7)};
@@ -1249,8 +1269,20 @@
   }
 
   .keyImg_ClosedBetaComponent {
-    height: #{sm(450)};
+    height: #{sm(700.01)};
     width: 100%;
+    img {
+      left: 4%;
+      height: #{sm(430.01)};
+      width: 90%;
+    }
+
+    video {
+      margin: auto 0 0 2.5%;
+      height: #{sm(240.01)};
+      width: 95%;
+      object-fit: cover;
+    }
   }
 
   .aside_ClosedBetaComponent {
@@ -1260,7 +1292,7 @@
   .asideKey_ClosedBetaComponent {
     gap: #{sm(16)};
     margin-bottom: #{sm(16)};
-    img {
+    video {
       width: #{sm(32)};
       height: #{sm(32.7)};
     }
@@ -1896,7 +1928,7 @@
     @include flexCenterBetween();
     gap: #{clamps(30)};
     margin-bottom: #{md(32)};
-    img {
+    video {
       width: #{md(64.5)};
       height: #{md(67.7)};
       object-fit: contain;

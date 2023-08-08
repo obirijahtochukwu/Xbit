@@ -435,6 +435,7 @@ export const TrailerGalleryComponent = () => {
                         src="/NFT_GAME/media/Group 1000001302.svg"
                         alt=""
                         className={styles.play_TrailerGalleryComponent}
+                        style={{ opacity: play?.[id] === "false" ? "1" : "" }}
                       />
                     ) : (
                       <BsPauseCircleFill
@@ -490,6 +491,7 @@ export const TrailerGalleryComponent = () => {
                           ref.current.play();
                           setPlay2({ ...play, [id]: "true" });
                         }}
+                        style={{ opacity: play2?.[id] === "false" ? "1" : "" }}
                         src="/NFT_GAME/media/Group 1000001302.svg"
                         alt=""
                         className={styles.play_TrailerGalleryComponent}
@@ -582,6 +584,7 @@ export const ClosedBetaComponent = () => {
         <aside className={styles.aside_ClosedBetaComponent}>
           <div className={styles.asideKey_ClosedBetaComponent}>
             <img src="/NFT_GAME/media/key.png.svg" alt="" />
+
             <div className="">
               For our closed beta you need to have{" "}
               <span className="yellow">a whitelist key.</span>
@@ -663,12 +666,19 @@ export const ClosedBetaComponent = () => {
             })}
           </footer>
         </aside>
-
-        <img
-          src="/NFT_GAME/media/Group 1000001316.svg"
-          alt=""
+        <div
+          style={{ backgroundImage: "url('/NFT_GAME/media/pseudo (7).svg')" }}
           className={styles.keyImg_ClosedBetaComponent}
-        />
+        >
+          <img src="/NFT_GAME/media/download_img.png.svg" alt="" className="" />
+          <video allowFullScreen autoPlay controls="" muted loop className={""}>
+            <source
+              src={
+                "/NFT_GAME/video/WhatsApp Video 2023-08-07 at 9.19.52 AM.mp4"
+              }
+            />
+          </video>
+        </div>
       </main>
     </div>
   );
@@ -686,21 +696,27 @@ export const OurActivityComponent = () => {
   const carousels = [
     {
       id: "1",
+      title:
+        "Tokyo Game Show 2022 | Katana Inu in Japan | Gamers loved our game",
       text: "Tokyo Game Show 2022 | Katana Inu in Japan | Gamers loved our game",
       desc: "The Katana Inu Team was from 15-18 August in #Tokyo Japan at Tokyo-Game Show. #tokyogameshow2022 #tgs We had a great time and the Japanese gamers fell in love with our game.",
-      img: "/NFT_GAME/media/6ef30ae04590f268bdada545b52602c1.png",
+      img: "https://www.youtube.com/embed/GZeepdKaLRQ",
     },
     {
       id: "2",
+      title:
+        "Katana Inu at Blockchain Economy in Istanbul 2022 | + Speech from Founder",
       text: "Blockchain Economy July 2022 in Istanbul",
       desc: "The Katana Inu Team was in Istanbul from 27-29 July at Blockchain Summit.We had a great time and meet a lot of potential partners, exchanges and influencers.",
-      img: "/NFT_GAME/media/div.ytp-cued-thumbnail-overlay-image.svg",
+      img: "https://www.youtube.com/embed/zT6neIbpTDw",
     },
     {
       id: "3",
+      title:
+        "Katana Inu SPEECH at World Blockchain Summit 23-24.03.22 &amp; Crypto Expo Dubai from 16-17 March Dubai.",
       text: "World BlockChain summit March 2022 at Atlantis Hotel in Dubai",
       desc: "The Katana Inu Team was on 23-24 March at World Blockchain Summit in Dubai and 16-17 March 2022 Crypto Expo Dubai.We had a great time and met a lot of potential partnerships and investors.",
-      img: "/NFT_GAME/media/e03023849099bef40407d74c753615bb.jpg",
+      img: "https://www.youtube.com/embed/d0k7ucNOL7A",
     },
   ];
 
@@ -767,22 +783,27 @@ export const OurActivityComponent = () => {
           className={styles.carousels_OurActivityComponent}
         >
           {/* PREVIOUS CAROUSEL */}
-          {carousels.map(({ img, id, text, desc }) => {
+          {carousels.map(({ img, id, text, desc, title }) => {
             const val = Number(id);
             if (val === active - 1) {
               return (
                 <div
                   className={`${styles.carousel_OurActivityComponent} close`}
                 >
-                  <div
+                  <iframe
+                    frameborder="0"
+                    title={title}
+                    src={img}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
                     style={{
                       width: active === Number(id) ? "54.167vw" : "39.375vw",
                       height: active === Number(id) ? "31.302vw" : "20.625vw",
                       backgroundImage: `url('${img}')`,
+                      objectFit: "cover",
                     }}
                     className={styles.carouselImg_OurActivityComponent}
-                  ></div>
-
+                  ></iframe>
                   <div
                     className={`${styles.carouselTitle_OurActivityComponent} ${styles.inactive}`}
                   >
@@ -795,51 +816,26 @@ export const OurActivityComponent = () => {
           })}
 
           {/* ACTIVE CAROUSEL */}
-          {carousels.map(({ img, id, text, desc }) => {
+          {carousels.map(({ img, id, text, desc, title }) => {
             if (active === Number(id)) {
               return (
                 <div
                   className={`active ${styles.carousel_OurActivityComponent}`}
                 >
-                  <div
+                  <iframe
+                    frameborder="0"
+                    title={title}
+                    src={img}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
                     style={{
                       width: active === Number(id) ? "54.167vw" : "39.375vw",
                       height: active === Number(id) ? "31.302vw" : "20.625vw",
                       backgroundImage: `url('${img}')`,
+                      objectFit: "cover",
                     }}
                     className={styles.carouselImg_OurActivityComponent}
-                  >
-                    <div className={styles.carouselHeader_OurActivityComponent}>
-                      <img
-                        src="/NFT_GAME/media/Link - Photo image of Katana Inu.svg"
-                        alt=""
-                        className={
-                          styles.carouselHeaderImg_OurActivityComponent
-                        }
-                      />
-                      <div
-                        className={
-                          styles.carouselHeaderTitle_OurActivityComponent
-                        }
-                      >
-                        Katana Inu at Blockchain Economy in Istanbul 2022 | +
-                        Speech from Founder
-                      </div>
-                      <div className={styles.share_OurActivityComponent}>
-                        <img src="/NFT_GAME/media/ytp-id-8.svg" alt="" />
-                        <div className="">Share</div>
-                      </div>
-                    </div>
-                  </div>
-                  {active === Number(id) ? (
-                    <img
-                      src="/NFT_GAME/media/Group 1000001324.svg"
-                      alt=""
-                      className={styles.play_OurActivityComponent}
-                    />
-                  ) : (
-                    ""
-                  )}
+                  ></iframe>
                   <div className={styles.carouselTitle_OurActivityComponent}>
                     {text}
                   </div>
@@ -850,29 +846,25 @@ export const OurActivityComponent = () => {
           })}
 
           {/* NEXT CAROUSEL */}
-          {carousels.map(({ img, id, text, desc }) => {
+          {carousels.map(({ img, id, text, desc, title }) => {
             const val = Number(id);
             if (val === active + 1) {
               return (
                 <div className={`${styles.carousel_OurActivityComponent} open`}>
-                  <img
+                  <iframe
+                    frameborder="0"
+                    title={title}
+                    src={img}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
                     style={{
                       width: active === Number(id) ? "54.167vw" : "39.375vw",
                       height: active === Number(id) ? "31.302vw" : "20.625vw",
+                      backgroundImage: `url('${img}')`,
+                      objectFit: "cover",
                     }}
-                    src={img}
-                    alt=""
                     className={styles.carouselImg_OurActivityComponent}
-                  />
-                  {active === Number(id) ? (
-                    <img
-                      src="/NFT_GAME/media/Group 1000001302.svg"
-                      alt=""
-                      className={styles.play_OurActivityComponent}
-                    />
-                  ) : (
-                    ""
-                  )}
+                  ></iframe>
                   <div
                     className={`${styles.carouselTitle_OurActivityComponent} ${styles.inactive}`}
                   >
@@ -886,7 +878,7 @@ export const OurActivityComponent = () => {
         </main>
       </article>
 
-      <div style={{ width: "90%" }} className={`${styles.sm} mx-auto`}>
+      <div style={{ width: "98%" }} className={`${styles.sm} mx-auto`}>
         <ReactElasticCarousel
           ref={carouselRef}
           disableArrowsOnEnd={false}
@@ -897,40 +889,17 @@ export const OurActivityComponent = () => {
           renderPagination={false}
           breakPoints={breakPoints}
         >
-          {carousels.map(({ img, id, text, desc }) => {
+          {carousels.map(({ img, id, text, desc, title }) => {
             return (
               <div className={`active ${styles.carousel_OurActivityComponent}`}>
-                <div
-                  style={{
-                    backgroundImage: `url('${img}')`,
-                  }}
+                <iframe
+                  frameborder="0"
+                  title={title}
+                  src={img}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
                   className={styles.carouselImg_OurActivityComponent}
-                >
-                  <div className={styles.carouselHeader_OurActivityComponent}>
-                    <img
-                      src="/NFT_GAME/media/Link - Photo image of Katana Inu.svg"
-                      alt=""
-                      className={styles.carouselHeaderImg_OurActivityComponent}
-                    />
-                    <div
-                      className={
-                        styles.carouselHeaderTitle_OurActivityComponent
-                      }
-                    >
-                      Katana Inu at Blockchain Economy in Istanbul 2022 | +
-                      Speech from Founder
-                    </div>
-                    <div className={styles.share_OurActivityComponent}>
-                      <img src="/NFT_GAME/media/ytp-id-8.svg" alt="" />
-                      <div className="">Share</div>
-                    </div>
-                  </div>
-                </div>
-                <img
-                  src="/NFT_GAME/media/Group 1000001324.svg"
-                  alt=""
-                  className={styles.play_OurActivityComponent}
-                />
+                ></iframe>
 
                 <div className={styles.carouselTitle_OurActivityComponent}>
                   {text}
