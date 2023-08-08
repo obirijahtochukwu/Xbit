@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import styles from "./index.module.scss";
 import Navbar from "../layout/header/Index";
 import ReactElasticCarousel from "react-elastic-carousel";
+import { BsPauseCircleFill } from "react-icons/bs";
 
 export const HeaderComponent = () => {
   const buttons = [
@@ -306,19 +307,31 @@ export const AboutTheGameComponent = () => {
 };
 
 export const TrailerGalleryComponent = () => {
+  const [play, setPlay] = useState({ 1: "false", 2: "false", 3: "false" });
+  const [play2, setPlay2] = useState({ 1: "false", 2: "false", 3: "false" });
   const [current, setCurrent] = useState("0");
   const [active, setActive] = useState(1);
   const carousels = [
     {
+      ref1: useRef(),
+      ref: useRef(),
       xd: "0%",
       id: "1",
-      img: "/NFT_GAME/media/6d0e24b50fddd43ef43d04108e058479.jpg",
+      img: "/NFT_GAME/video/WhatsApp Video 2023-08-07 at 9.19.52 AM.mp4",
     },
-    { xd: "25%", id: "2", img: "/NFT_GAME/media/trailer00.png.svg" },
     {
+      ref1: useRef(),
+      ref: useRef(),
+      xd: "25%",
+      id: "2",
+      img: "/NFT_GAME/video/WhatsApp Video 2023-08-07 at 9.12.33 AM.mp4",
+    },
+    {
+      ref1: useRef(),
+      ref: useRef(),
       xd: "50%",
       id: "3",
-      img: "/NFT_GAME/media/e9d80f1f7ece68cbc1fe018dc0e6b50a.png",
+      img: "/NFT_GAME/video/WhatsApp Video 2023-08-07 at 7.08.16 AM.mp4",
     },
   ];
 
@@ -394,20 +407,45 @@ export const TrailerGalleryComponent = () => {
           renderPagination={false}
           breakPoints={breakPoints}
         >
-          {carousels.map(({ img, id }) => {
+          {carousels.map(({ img, id, ref1 }) => {
+            const idx = Number(id);
+
             return (
               <div className={styles.carousel_TrailerGalleryComponent}>
-                <img
-                  src={img}
-                  alt=""
+                <video
+                  allowFullScreen
+                  autoPlay=""
+                  controls=""
+                  muted
+                  ref={ref1}
+                  loop
                   className={styles.carouselImg_TrailerGalleryComponent}
-                />
+                >
+                  <source src={img} />
+                </video>
                 {active === Number(id) ? (
-                  <img
-                    src="/NFT_GAME/media/Group 1000001302.svg"
-                    alt=""
-                    className={styles.play_TrailerGalleryComponent}
-                  />
+                  <>
+                    {console.log(play?.[id])}
+                    {play?.[id] === "false" ? (
+                      <img
+                        onClick={() => {
+                          ref1.current.play();
+                          setPlay({ ...play, [id]: "true" });
+                        }}
+                        src="/NFT_GAME/media/Group 1000001302.svg"
+                        alt=""
+                        className={styles.play_TrailerGalleryComponent}
+                      />
+                    ) : (
+                      <BsPauseCircleFill
+                        onClick={() => {
+                          ref1.current.pause();
+                          setPlay({ ...play, [id]: "false" });
+                        }}
+                        className={styles.pause_TrailerGalleryComponent}
+                      />
+                    )}
+                  </>
                 ) : (
                   ""
                 )}
@@ -425,24 +463,47 @@ export const TrailerGalleryComponent = () => {
       </article>
       <article className={`${styles.md} w-100 overflow-hidden`}>
         <main ref={ref} className={styles.carousels_TrailerGalleryComponent}>
-          {carousels.map(({ img, id }) => {
+          {carousels.map(({ img, id, ref }) => {
             return (
               <div className={styles.carousel_TrailerGalleryComponent}>
-                <img
+                <video
+                  allowFullScreen
+                  autoPlay=""
+                  controls=""
+                  muted
+                  ref={ref}
+                  loop
+                  className={styles.carouselImg_TrailerGalleryComponent}
                   style={{
+                    borderColor: active === Number(id) ? "" : "transparent",
                     width: active === Number(id) ? "54.167vw" : "",
                     height: active === Number(id) ? "31.302vw" : "",
                   }}
-                  src={img}
-                  alt=""
-                  className={styles.carouselImg_TrailerGalleryComponent}
-                />
+                >
+                  <source src={img} />
+                </video>
                 {active === Number(id) ? (
-                  <img
-                    src="/NFT_GAME/media/Group 1000001302.svg"
-                    alt=""
-                    className={styles.play_TrailerGalleryComponent}
-                  />
+                  <>
+                    {play2?.[id] === "false" ? (
+                      <img
+                        onClick={() => {
+                          ref.current.play();
+                          setPlay2({ ...play, [id]: "true" });
+                        }}
+                        src="/NFT_GAME/media/Group 1000001302.svg"
+                        alt=""
+                        className={styles.play_TrailerGalleryComponent}
+                      />
+                    ) : (
+                      <BsPauseCircleFill
+                        onClick={() => {
+                          ref.current.pause();
+                          setPlay2({ ...play, [id]: "false" });
+                        }}
+                        className={styles.pause_TrailerGalleryComponent}
+                      />
+                    )}
+                  </>
                 ) : (
                   ""
                 )}

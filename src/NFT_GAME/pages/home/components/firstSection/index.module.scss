@@ -339,11 +339,34 @@
 .play_TrailerGalleryComponent {
   position: absolute;
   top: 13vw;
-  left: 23.906vw;
+  left: calc((100% - 5.313vw) / 2);
   z-index: 1;
   cursor: pointer;
   height: 5.313vw;
   width: 5.313vw;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.carousel_TrailerGalleryComponent:hover .play_TrailerGalleryComponent {
+  opacity: 1;
+}
+
+.pause_TrailerGalleryComponent {
+  position: absolute;
+  left: calc((100% - 5.313vw) / 2);
+  top: 13vw;
+  height: 5.313vw;
+  width: 5.313vw;
+  z-index: 1;
+  background: $black;
+  color: $yellow;
+  border-radius: 100%;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.carousel_TrailerGalleryComponent:hover .pause_TrailerGalleryComponent {
+  opacity: 1;
 }
 
 .title_TrailerGalleryComponent {
@@ -1102,6 +1125,7 @@
   .control_TrailerGalleryComponent {
     top: 40%;
     padding: 0 #{sm(32)};
+    z-index: 1;
 
     img {
       height: #{sm(37)};
@@ -1112,15 +1136,36 @@
   .carouselImg_TrailerGalleryComponent {
     width: #{sm(250)};
     height: #{sm(200)};
+    z-index: -1;
     object-fit: cover;
     border: 0.051vw solid $yellow;
     transition: all 0.3s ease-in-out;
   }
 
   .play_TrailerGalleryComponent {
+    left: calc((100% - #{sm(30)}) / 2);
     top: #{sm(90)};
     height: #{sm(30)};
     width: #{sm(30)};
+    z-index: 1;
+  }
+
+  .pause_TrailerGalleryComponent {
+    position: absolute;
+    left: calc((100% - #{sm(30)}) / 2);
+    top: #{sm(90)};
+    height: #{sm(30)};
+    width: #{sm(30)};
+    z-index: 1;
+    background: $black;
+    color: $yellow;
+    border-radius: 100%;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  .carousel_TrailerGalleryComponent:hover .pause_TrailerGalleryComponent {
+    opacity: 1;
   }
 
   .title_TrailerGalleryComponent {
