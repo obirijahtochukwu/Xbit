@@ -115,7 +115,7 @@ body {
   $maxWidth: 1400px,
   $minWidth: 350px
 ) {
-  @return calc(#{$value} * (clamp(1400px, var(--vw), 10000px) / 1920));
+  @return calc(#{$value} * (clamp(1400px, var(--vw), 1920px) / 1920));
 }
 
 @function scaleY($value, $ideal: 1810, $current: 100vh) {

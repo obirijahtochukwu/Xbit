@@ -477,8 +477,14 @@ export const TrailerGalleryComponent = () => {
                   className={styles.carouselImg_TrailerGalleryComponent}
                   style={{
                     borderColor: active === Number(id) ? "" : "transparent",
-                    width: active === Number(id) ? "54.167vw" : "",
-                    height: active === Number(id) ? "31.302vw" : "",
+                    width:
+                      active === Number(id)
+                        ? "calc(1040.006*clamp(10px,100vw,1920px)/1920)"
+                        : "",
+                    height:
+                      active === Number(id)
+                        ? "calc(600.998*clamp(10px,100vw,1920px)/1920)"
+                        : "",
                   }}
                 >
                   <source src={img} />
@@ -797,8 +803,14 @@ export const OurActivityComponent = () => {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen
                     style={{
-                      width: active === Number(id) ? "54.167vw" : "39.375vw",
-                      height: active === Number(id) ? "31.302vw" : "20.625vw",
+                      width:
+                        active === Number(id)
+                          ? " calc(1040.006 * (clamp(100px, 100vw, 1920px)) / 1920)"
+                          : " calc(756 * (clamp(100px, 100vw, 1920px)) / 1920)",
+                      height:
+                        active === Number(id)
+                          ? " calc(600.998 * (clamp(100px, 100vw, 1920px)) / 1920)"
+                          : " calc(396 * (clamp(100px, 100vw, 1920px)) / 1920)",
                       backgroundImage: `url('${img}')`,
                       objectFit: "cover",
                     }}
@@ -829,8 +841,14 @@ export const OurActivityComponent = () => {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen
                     style={{
-                      width: active === Number(id) ? "54.167vw" : "39.375vw",
-                      height: active === Number(id) ? "31.302vw" : "20.625vw",
+                      width:
+                        active === Number(id)
+                          ? " calc(1040.006 * (clamp(100px, 100vw, 1920px)) / 1920)"
+                          : " calc(756 * (clamp(100px, 100vw, 1920px)) / 1920)",
+                      height:
+                        active === Number(id)
+                          ? " calc(600.998 * (clamp(100px, 100vw, 1920px)) / 1920)"
+                          : " calc(396 * (clamp(100px, 100vw, 1920px)) / 1920)",
                       backgroundImage: `url('${img}')`,
                       objectFit: "cover",
                     }}
@@ -858,8 +876,14 @@ export const OurActivityComponent = () => {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen
                     style={{
-                      width: active === Number(id) ? "54.167vw" : "39.375vw",
-                      height: active === Number(id) ? "31.302vw" : "20.625vw",
+                      width:
+                        active === Number(id)
+                          ? " calc(1040.006 * (clamp(100px, 100vw, 1920px)) / 1920)"
+                          : " calc(756 * (clamp(100px, 100vw, 1920px)) / 1920)",
+                      height:
+                        active === Number(id)
+                          ? "calc(600.998 * (clamp(100px, 100vw, 1920px)) / 1920)"
+                          : " calc(396 * (clamp(100px, 100vw, 1920px)) / 1920)",
                       backgroundImage: `url('${img}')`,
                       objectFit: "cover",
                     }}
@@ -1076,24 +1100,26 @@ export const NextPhaseComponent = () => {
       }}
       className={styles.NextPhaseComponent}
     >
-      <div
-        style={{ textAlign: "start" }}
-        className={styles.subtitle_OurActivityComponent}
-      >
-        Next Phase
-      </div>
-      <div className={styles.text_NextPhaseComponent}>
-        Closed Alpha Starting May 15th, 2023
-      </div>
-      <div className={styles.desc_NextPhaseComponent}>
-        Exciting news for gamers as the Closed Alpha for a highly anticipated
-        game is set to begin on May 15th, 2023. Closed Alpha testing is a
-        crucial stage in game development as it allows developers to test.
-      </div>
+      <main>
+        <div
+          style={{ textAlign: "start" }}
+          className={styles.subtitle_OurActivityComponent}
+        >
+          Next Phase
+        </div>
+        <div className={styles.text_NextPhaseComponent}>
+          Closed Alpha Starting May 15th, 2023
+        </div>
+        <div className={styles.desc_NextPhaseComponent}>
+          Exciting news for gamers as the Closed Alpha for a highly anticipated
+          game is set to begin on May 15th, 2023. Closed Alpha testing is a
+          crucial stage in game development as it allows developers to test.
+        </div>
 
-      <div style={{ width: "fit-content" }} className={styles.btn_Header}>
-        Sign Up For Alpha
-      </div>
+        <div style={{ width: "fit-content" }} className={styles.btn_Header}>
+          Sign Up For Alpha
+        </div>
+      </main>
     </section>
   );
 };

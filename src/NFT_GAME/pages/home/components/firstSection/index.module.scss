@@ -291,7 +291,8 @@
 // TrailerGalleryComponent
 .TrailerGalleryComponent {
   position: relative;
-
+  max-width: #{clamps(1920)};
+  margin: 0 auto;
   background: $black;
   z-index: 1;
 }
@@ -316,8 +317,8 @@
   width: fit-content;
   overflow: scroll;
   @include flexCenter();
-  gap: 6.771vw;
-  padding: 5.208vw 15%;
+  gap: #{clamps(130.003)};
+  padding: #{clamps(99.994)} 15%;
   z-index: 5;
 
   &::-webkit-scrollbar {
@@ -329,21 +330,21 @@
   position: relative;
 }
 .carouselImg_TrailerGalleryComponent {
-  width: 43.333vw;
-  height: 23.893vw;
+  width: #{clamps(831.994)};
+  height: #{clamps(458.746)};
   object-fit: cover;
-  border: 0.051vw solid $yellow;
+  border: 0.051vw solid $yellow !important;
   transition: all 0.3s ease-in-out;
 }
 
 .play_TrailerGalleryComponent {
   position: absolute;
-  top: 13vw;
-  left: calc((100% - 5.313vw) / 2);
+  top: #{clamps(209.6)};
+  left: calc((100% - #{clamps(102.01)}) / 2);
   z-index: 1;
   cursor: pointer;
-  height: 5.313vw;
-  width: 5.313vw;
+  height: #{clamps(102.01)};
+  width: #{clamps(102.01)};
   opacity: 0;
   transition: all 0.3s ease-in-out;
 }
@@ -353,10 +354,10 @@
 
 .pause_TrailerGalleryComponent {
   position: absolute;
-  left: calc((100% - 5.313vw) / 2);
-  top: 13vw;
-  height: 5.313vw;
-  width: 5.313vw;
+  left: calc((100% - #{clamps(102.01)}) / 2);
+  top: #{clamps(209.6)};
+  height: #{clamps(102.01)};
+  width: #{clamps(102.01)};
   z-index: 1;
   background: $black;
   color: $yellow;
@@ -381,11 +382,11 @@
 
 .bg_TrailerGalleryComponent {
   position: absolute;
-  bottom: 17.708vw;
+  bottom: #{clamps(400.994)};
   z-index: -1;
-  left: 23.906vw;
-  height: 55.938vw;
-  width: 61.2vw;
+  left: #{clamps(308.995)};
+  height: #{clamps(1074.01)};
+  width: #{clamps(1175.04)};
 }
 
 // ClosedBetaComponent
@@ -490,7 +491,9 @@
   @include flexCenter();
   gap: #{clamps(100)};
   width: fit-content;
-  margin: #{clamps(130)} #{clamps(103)} 0 auto;
+  max-width: #{clamps(1920)};
+  padding-left: #{clamps(103)};
+  margin: #{clamps(130)} auto 0 auto;
 }
 
 .keyImg_ClosedBetaComponent {
@@ -699,6 +702,8 @@
   position: relative;
   background: $black;
   width: 100%;
+  max-width: #{clamps(1920)};
+  margin: 0 auto;
   padding-bottom: #{clamps(175.8)};
 }
 
@@ -766,50 +771,10 @@
   @include BgImgContain();
   object-fit: cover;
   transition: all 0.3s ease-in-out;
-  padding: 1.625vw;
-}
-
-.carouselHeader_OurActivityComponent {
-  @include flexCenter();
-  font-size: #{clamps(18)};
-  text-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.5);
-  @include text400();
-  font-family: $roboto !important;
-  color: #eee;
-  font-style: normal;
-}
-
-.play_OurActivityComponent {
-  position: absolute;
-  top: 13vw;
-  left: 23.906vw;
-  z-index: 1;
-  cursor: pointer;
-  height: 5.313vw;
-  width: 5.313vw;
-}
-
-.carouselHeaderImg_OurActivityComponent {
-  width: 2.083vw;
-  height: 2.083vw;
-  border-radius: 100%;
-  margin-right: #{clamps(10)};
-}
-
-.share_OurActivityComponent {
-  margin-left: auto;
-  display: flex;
-  flex-direction: column;
-
-  img {
-    margin: 0 auto;
-    width: #{clamps(20)};
-    height: #{clamps(16)};
-  }
 }
 
 .carouselTitle_OurActivityComponent {
-  font-size: calc(42 * 100vw / 1920);
+  font-size: calc(42 * (clamp(1000px, 100vw, 1920px)) / 1920);
   @include text700();
   font-family: $Jost !important;
   color: $white;
@@ -824,18 +789,18 @@
   }
 }
 .carouselTitle_OurActivityComponent.inactive {
-  font-size: calc(37.8 * 100vw / 1920) !important;
+  font-size: calc(37.8 * (clamp(1000px, 100vw, 1920px)) / 1920) !important;
 }
 
 .text_OurActivityComponent {
-  font-size: calc(24 * 100vw / 1920);
+  font-size: calc(24 * (clamp(1000px, 100vw, 1920px)) / 1920);
   @include text400();
   font-family: $Jost !important;
   color: #787878;
   text-align: center;
   font-style: normal;
   margin: 0px auto;
-  max-width: 30.365vw;
+  max-width: #{clamps(583.008)};
 }
 
 // ChooseYourWarriorComponent
@@ -903,6 +868,13 @@
   @media (min-width: 1000px) {
     padding-left: #{clamps(410)};
   }
+
+  main {
+    @media (min-width: 1200px) {
+      max-width: #{clamps(1920)};
+      margin: 0 auto;
+    }
+  }
 }
 
 .text_NextPhaseComponent {
@@ -964,10 +936,10 @@
 
   .logos {
     flex-wrap: wrap;
-    gap: #{sm(32)};
+    gap: #{sm(16)};
 
     img {
-      width: #{sm(110)};
+      width: #{sm(108)};
       height: #{sm(62)};
     }
   }
@@ -1125,7 +1097,7 @@
     height: #{sm(320)};
     z-index: -1;
 
-    @media (max-width: 390px) {
+    @media (max-width: 500px) {
       display: none;
     }
   }
@@ -1139,7 +1111,7 @@
   }
   .TrailerGalleryComponent {
     padding: #{sm(50)} 0 !important;
-    max-height: fit-content;
+    height: #{sm(350)};
   }
 
   .control_TrailerGalleryComponent {
@@ -1154,8 +1126,8 @@
   }
 
   .carouselImg_TrailerGalleryComponent {
-    width: #{sm(250)};
-    height: #{sm(200)};
+    width: #{sm(300)};
+    height: #{sm(250)};
     z-index: -1;
     object-fit: cover;
     border: 0.051vw solid $yellow;
@@ -1194,8 +1166,10 @@
   }
 
   .bg_TrailerGalleryComponent {
-    bottom: #{sm(190)};
-    left: #{sm(100)};
+    width: #{sm(350)};
+    height: #{sm(450)};
+    bottom: #{sm(130)};
+    left: #{sm(16)};
   }
 
   // ClosedBetaComponent
@@ -1269,7 +1243,7 @@
   }
 
   .keyImg_ClosedBetaComponent {
-    height: #{sm(700.01)};
+    height: #{sm(500.01)};
     width: 100%;
     img {
       left: 4%;
@@ -1453,6 +1427,10 @@
   }
 
   // ChooseYourWarriorComponent
+  .ChooseYourWarriorComponent {
+    padding-top: 0;
+  }
+
   .section_ChooseYourWarriorComponent {
     @include flexCenterBetween();
     gap: #{clamps(0)};
@@ -1477,7 +1455,7 @@
   // NextPhaseComponent
   .NextPhaseComponent {
     padding-top: #{sm(200)};
-    padding-bottom: #{sm(210)};
+    padding-bottom: #{sm(100)};
     padding-left: #{sm(16)};
   }
 

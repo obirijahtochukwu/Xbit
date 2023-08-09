@@ -26,9 +26,9 @@
 }
 
 .aside_UltimateUtilityComponent {
-  background-position: 200% -50% !important;
+  background-position: top right !important;
   background-repeat: no-repeat !important;
-  background-size: #{clamps(509)}, #{clamps(353)};
+  background-size: #{clamps(509)} #{clamps(353)};
   width: #{clamps(815.3)};
   height: #{clamps(631.53)};
   background: transparent;
@@ -116,6 +116,10 @@
 }
 
 // UltimateJourneyComponent
+.UltimateJourneyComponent {
+  max-width: #{clamps(2200)};
+  margin: 0 auto;
+}
 .title_UltimateJourneyComponent {
   font-size: #{clamps(58)};
   @include text700();
@@ -145,6 +149,10 @@
   border-bottom: #{clamps(1)} solid #848484;
   position: relative;
 
+  @media (min-width: 1400px) {
+    padding-left: #{clamps(250)} !important;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -155,6 +163,9 @@
     border-radius: 100%;
     background-color: #858585;
     margin-left: #{clamps(50)};
+    @media (min-width: 1400px) {
+      margin-left: #{clamps(250)} !important;
+    }
   }
 }
 
@@ -165,6 +176,10 @@
   color: $white;
   margin: #{clamps(30)} 0;
   padding-left: #{clamps(50)};
+
+  @media (min-width: 1400px) {
+    padding-left: #{clamps(250)} !important;
+  }
 }
 
 .steps_UltimateJourneyComponent {
@@ -177,6 +192,9 @@
   @include flexCenter();
   gap: #{clamps(5)};
   padding-left: #{clamps(50)};
+  @media (min-width: 1400px) {
+    padding-left: #{clamps(250)} !important;
+  }
 
   img {
     background-color: #858585;
