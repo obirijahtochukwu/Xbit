@@ -1082,15 +1082,7 @@
     z-index: 2;
   }
 
-  .mintsmall_AboutTheGameComponent {
-    font-size: #{clamps(8)};
-    font-family: $poppins;
-    font-weight: 600;
-    color: $yellow;
-  }
-
   .mintImg__AboutTheGameComponent {
-    position: absolute;
     top: #{sm(-63)};
     left: #{sm(250)};
     width: #{sm(176)};
@@ -1098,7 +1090,12 @@
     z-index: -1;
 
     @media (max-width: 500px) {
-      display: none;
+      top: #{sm(-40)};
+      right: #{sm(0)};
+      left: unset;
+      width: #{sm(106)};
+      height: #{sm(120)};
+      object-fit: cover;
     }
   }
 
@@ -1436,6 +1433,7 @@
     gap: #{clamps(0)};
     padding: 0 #{sm(16)};
     width: 100%;
+    overflow-x: hidden;
   }
 
   .main_ChooseYourWarriorComponent {
@@ -1446,6 +1444,11 @@
   .carouselImg_ChooseYourWarriorComponent {
     width: #{sm(188)};
     max-height: #{sm(276)};
+  }
+
+  .control_ChooseYourWarriorComponent {
+    height: #{sm(25)};
+    width: #{sm(40)};
   }
 
   .carouselTitle_ChooseYourWarriorComponent {

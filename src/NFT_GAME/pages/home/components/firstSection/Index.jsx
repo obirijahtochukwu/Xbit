@@ -311,24 +311,32 @@ export const TrailerGalleryComponent = () => {
   const [play2, setPlay2] = useState({ 1: "false", 2: "false", 3: "false" });
   const [current, setCurrent] = useState("0");
   const [active, setActive] = useState(1);
+
+  const videoRef1 = useRef();
+  const videoRef2 = useRef();
+  const videoRef3 = useRef();
+  const videoRef11 = useRef();
+  const videoRef22 = useRef();
+  const videoRef33 = useRef();
+
   const carousels = [
     {
-      ref1: useRef(),
-      ref: useRef(),
+      ref1: videoRef1,
+      ref: videoRef11,
       xd: "0%",
       id: "1",
       img: "/NFT_GAME/video/WhatsApp Video 2023-08-07 at 9.19.52 AM.mp4",
     },
     {
-      ref1: useRef(),
-      ref: useRef(),
+      ref1: videoRef2,
+      ref: videoRef22,
       xd: "25%",
       id: "2",
       img: "/NFT_GAME/video/WhatsApp Video 2023-08-07 at 9.12.33 AM.mp4",
     },
     {
-      ref1: useRef(),
-      ref: useRef(),
+      ref1: videoRef3,
+      ref: videoRef33,
       xd: "50%",
       id: "3",
       img: "/NFT_GAME/video/WhatsApp Video 2023-08-07 at 7.08.16 AM.mp4",
@@ -365,6 +373,13 @@ export const TrailerGalleryComponent = () => {
     ref.current.style.transition = `0.4s`;
     ref.current.style.transform = `translateX(${`-${current}`})`;
   }, [current]);
+
+  useEffect(() => {
+    videoRef2.current.currentTime = "10.26";
+    videoRef3.current.currentTime = "10.26";
+    videoRef22.current.currentTime = "10.26";
+    videoRef33.current.currentTime = "10.26";
+  }, []);
 
   return (
     <article className={styles.TrailerGalleryComponent}>
@@ -409,15 +424,17 @@ export const TrailerGalleryComponent = () => {
         >
           {carousels.map(({ img, id, ref1 }) => {
             const idx = Number(id);
-
             return (
               <div className={styles.carousel_TrailerGalleryComponent}>
                 <video
                   allowFullScreen
+                  id={id}
                   autoPlay=""
                   controls=""
                   muted
-                  ref={ref1}
+                  ref={
+                    idx === 1 ? videoRef1 : idx === 2 ? videoRef2 : videoRef3
+                  }
                   loop
                   className={styles.carouselImg_TrailerGalleryComponent}
                 >
@@ -465,6 +482,7 @@ export const TrailerGalleryComponent = () => {
       <article className={`${styles.md} w-100 overflow-hidden`}>
         <main ref={ref} className={styles.carousels_TrailerGalleryComponent}>
           {carousels.map(({ img, id, ref }) => {
+            const idx = Number(id);
             return (
               <div className={styles.carousel_TrailerGalleryComponent}>
                 <video
@@ -472,7 +490,9 @@ export const TrailerGalleryComponent = () => {
                   autoPlay=""
                   controls=""
                   muted
-                  ref={ref}
+                  ref={
+                    idx === 1 ? videoRef11 : idx === 2 ? videoRef22 : videoRef33
+                  }
                   loop
                   className={styles.carouselImg_TrailerGalleryComponent}
                   style={{
