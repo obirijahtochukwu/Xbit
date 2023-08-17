@@ -4,20 +4,21 @@ import styles from "./faq.module.scss";
 
 export const Faq = ({ title, description, showFaq, setShowFaq }) => {
   const ref = React.useRef(null);
-  const [height, setHeight] = React.useState(0);
+  const textRef = React.useRef(null);
+  const [textheight, setTextHeight] = React.useState(0);
 
   // THIS USEFFECT IS USED TO GET DIV HEIGHT
   React.useEffect(() => {
-    setHeight(ref.current?.scrollHeight);
+    setTextHeight(textRef.current?.scrollHeight);
     window.addEventListener("resize", () => {
-      setHeight(ref.current?.scrollHeight);
+      setTextHeight(textRef.current?.scrollHeight);
     });
     return () => {
       window.removeEventListener("resize", () => {
-        setHeight(0);
+        console.log("ll");
       });
     };
-  }, []);
+  }, [window.innerWidth]);
 
   return (
     <main className={`${styles.faq} ${showFaq === title ? styles.show : ""}`}>
@@ -57,20 +58,21 @@ export const Faq = ({ title, description, showFaq, setShowFaq }) => {
       </div>
 
       <div
-        ref={ref}
         style={{
-          height: showFaq === title ? `${height + 10}px` : "0px",
+          height: showFaq === title ? `${textheight + 10}px` : "0px",
           paddingTop: showFaq === title ? "" : "0px",
         }}
         className={styles.description}
       >
         <img
-          style={{ height: `${height - 5}px` }}
+          style={{ height: `${textheight}px` }}
           src="/media/faqs/Line 4.svg"
           alt=""
           className=""
         />
-        <div className="">{description}</div>
+        <div ref={textRef} style={{ height: "fit-content" }} className="">
+          {description}
+        </div>
       </div>
     </main>
   );
